@@ -42,7 +42,6 @@
     "postcss": "^8.4.47",
     "autoprefixer": "^10.4.20"
   },
-  "engines": {
-    "node": ">=18.20.0"
+  "engines": { "node": "18.20.0" }
   }
 }
