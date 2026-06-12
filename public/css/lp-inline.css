@@ -1,0 +1,592 @@
+  html { scroll-behavior: smooth; overflow-x: clip; }
+  body { font-family: 'DM Sans', system-ui, sans-serif; color: #2e2e2e; -webkit-font-smoothing: antialiased; overflow-x: hidden; max-width: 100%; }
+  h1, h2, h3, .heading { font-family: 'Kufam', system-ui, sans-serif; color: #371b01; }
+  .h2 { font-size: 40px; line-height: 48px; letter-spacing: 0.5px; font-weight: 400; }
+  .h4 { font-size: 20px; line-height: 24px; letter-spacing: 0.5px; font-weight: 700; }
+  .kicker { font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 24px; font-weight: 500; color: #371b01; }
+  .content { font-size: 16px; line-height: 24px; font-weight: 400; }
+  .container-fig { max-width: 1152px; margin-left: auto; margin-right: auto; padding-left: 24px; padding-right: 24px; }
+  @media (min-width: 1280px) { .container-fig { padding-left: 0; padding-right: 0; } }
+
+  /* iMac DESKTOP (≥1024px): absolute no canto superior direito da dobra Modelos,
+     sangrando da borda direita da viewport, width responsivo entre 1024 e 1920+. */
+  #modelos { position: relative; }
+  /* Garantia: imagem mobile NUNCA aparece no desktop (não depende só do Tailwind lg:hidden) */
+  @media (min-width: 1024px) {
+    #modelos .modelos-img-mobile { display: none !important; }
+  }
+  #modelos .modelos-imac-desktop {
+    position: absolute;
+    top: -280px;
+    right: -215px;
+    width: 720px;
+    height: auto;
+    z-index: 5;
+    pointer-events: none;
+    border-bottom-left-radius: 60px;
+    filter: drop-shadow(0 18px 28px rgba(55, 27, 1, 0.15)) drop-shadow(0 6px 10px rgba(55, 27, 1, 0.08));
+  }
+
+  /* ========== TABLET DESKTOP (1024-1279px): reduz padding lateral das sections ========== */
+  @media (min-width: 1024px) and (max-width: 1279px) {
+    section[style*="107px"] {
+      padding-left: 48px !important;
+      padding-right: 48px !important;
+    }
+    footer[style*="107px"] {
+      padding-left: 48px !important;
+      padding-right: 48px !important;
+    }
+    /* iMac: ajusta sizing pra não sobrepor texto em viewports pequenos */
+    #modelos .modelos-imac-desktop {
+      width: clamp(440px, 50vw, 720px) !important;
+      right: -120px !important;
+      top: -240px !important;
+    }
+  }
+
+  /* ========== GUARD-RAIL GLOBAL: previne scroll horizontal acidental ========== */
+  html, body { max-width: 100vw; overflow-x: clip; }
+  .btn-primary { display: inline-flex; align-items: center; justify-content: center; background: #ffb800; color: #371b01; font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 16px; line-height: 24px; padding: 16px 24px; border-radius: 8px; transition: 0.2s; cursor: pointer; }
+  .btn-primary:hover { background: #371b01; color: #ffb800; }
+  .btn-secondary { display: inline-flex; align-items: center; justify-content: center; background: transparent; color: #371B01; font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 16px; line-height: 24px; padding: 16px 24px; border-radius: 8px; border: 2px solid #371B01; transition: 0.2s; cursor: pointer; }
+  /* Hover unificado pra todos os botões amarelos: bg vira marrom, texto vira amarelo */
+  .btn-yellow-hover { transition: background-color 0.2s, color 0.2s; }
+  .btn-yellow-hover:hover { background-color: #371b01 !important; color: #ffb800 !important; }
+  .btn-secondary:hover { background: #371B01; color: #fff; }
+  .pill-kicker { display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; border-radius: 999px; background: #fff8e1; color: #371b01; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; }
+  .arrow::before { content: ''; display: inline-block; width: 18px; height: 18px; margin-right: 12px; background-color: #ffb800; border-radius: 50%; vertical-align: middle; position: relative; }
+
+  li.flex.items-start > span { white-space: nowrap !important; }
+  /* v55 — Breakpoint 1920px+: aumenta padding lateral para 288px (centraliza container ~1344px no centro). Aplica a todas as sections. */
+  @media (min-width: 1920px) {
+    section { padding-left: 288px !important; padding-right: 288px !important; }
+    footer { padding-left: 288px !important; padding-right: 288px !important; }
+  }
+
+  /* v50 — Mobile específicos */
+  @media (max-width: 1023px) {
+    /* (2) Hero mobile: imagem centralizada (remover sangramento que descentrava) */
+    #solucao .hero-img-box {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      background-position: center center !important;
+    }
+    /* Hero H1 mobile: tirar nowrap do "parcelamento no cartão" pra deixar quebrar em "no cartão" na 4ª linha */
+    #solucao h1 span[style*="white-space: nowrap"],
+    #solucao h2 span[style*="white-space: nowrap"] { white-space: normal !important; }
+    /* (4) Credibilidade mobile: reduzir padding-top (aproximar do hero) */
+    section#infraestrutura:not(#solucao) { padding-top: 16px !important; }
+    /* (5) Mobile CTA #problema: mostrar curto, esconder longo */
+    section#problema .cta-txt-desktop { display: none !important; }
+    section#problema .cta-txt-mobile { display: inline !important; }
+    /* (6) Aplicação Prática mobile: reduzir padding-top */
+
+
+    /* v57 — Mobile: 4 ajustes de espaço branco baseados em prints do Victor */
+    /* 1) Hero: reduzir gap entre bullets e botões no mobile (margin-top: 32 → 0) */
+    .hero-buttons { margin-top: 0 !important; }
+    /* 2) Aplicação Prática mobile: reduzir padding-top da section (já tem em outra regra, mas reforçar) */
+    section:has(.impacto-mobile) { padding-top: 0 !important; padding-bottom: 0 !important; }
+    /* 3) Logos (#empresas) → Modelos: reduzir padding-bottom do #empresas + padding-top do #modelos */
+    section#empresas:not(#solucao):not(#como-funciona):not(#faq) { padding-bottom: 16px !important; }
+    section#modelos:not(#solucao):not(#como-funciona):not(#faq) { padding-top: 0 !important; }
+    /* 4) #quem-somos mobile: reduzir padding-top (era 40 do Figma, Victor pediu menos) + aumentar gap entre parágrafo e carrossel */
+    section#quem-somos:not(#solucao) { padding-top: 0 !important; padding-left: 32px !important; padding-right: 32px !important; padding-bottom: 0 !important; }
+    /* v56 — #quem-somos mobile: gap 40px entre header (logo/texto) e carrossel */
+    section#quem-somos > div > div.flex.items-center { 
+      flex-direction: column !important; 
+      align-items: flex-start !important;
+      gap: 64px !important; 
+      padding: 24px 0 0 0 !important;
+    }
+    /* v53 — Aplicação Prática (section SEM id) mobile: reduz padding-top + remove gap excessivo após #como-funciona */
+    section:has(.impacto-mobile) { padding-top: 8px !important; padding-bottom: 32px !important; }
+    /* (9) #quem-somos mobile: zerar padding-top + ajustar gap interno como Aplicação Prática */
+    section#quem-somos:not(#solucao) { padding-top: 40px !important; padding-left: 32px !important; padding-right: 32px !important; padding-bottom: 0 !important; }
+    section#quem-somos > div > div.flex { gap: 16px !important; padding: 0 !important; }
+    /* (10) #seguranca mobile: reduzir padding-top */
+    section#seguranca:not(#solucao):not(#como-funciona):not(#faq) { padding-top: 16px !important; }
+    /* (12) FAQ mobile: reduzir margin-bottom (240 era pro desktop) */
+    section#faq { padding: 72px 0 56px 0 !important; }
+  }
+  /* (11) FAQ desktop: respiro embaixo quando última pergunta abre */
+  #faq .faq-desktop details[open]:last-of-type {
+    margin-bottom: 48px;
+  }
+
+
+  /* v51 — 'parcelamento no cartão' nowrap só no desktop (mobile deixa quebrar) */
+  @media (min-width: 1024px) {
+    .parcelamento-bold { white-space: nowrap; }
+  }
+  /* v49 — Animação suave na abertura/fechamento dos drops do FAQ */
+  #faq details > div {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+  }
+  #faq details[open] > div {
+    max-height: 500px;
+    transition: max-height 0.4s ease-in, padding 0.3s ease-in;
+  }
+  /* Chevron rotation suave */
+  #faq details > summary svg {
+    transition: transform 0.3s ease;
+  }
+  #faq details[open] > summary svg {
+    transform: rotate(180deg);
+  }
+
+  h1, h2, h3 { text-wrap: balance; }
+  .hero-kicker, section p { text-wrap: pretty; }
+  .impacto-desktop .flex.w-full { align-items: stretch !important; }
+  .impacto-desktop article { display: flex !important; flex-direction: column !important; }
+  .impacto-desktop article > div { flex: 1 1 auto; }
+  .impacto-mobile .imp-track { align-items: stretch !important; }
+  .impacto-mobile .imp-card { align-self: stretch !important; min-height: 200px; height: auto !important; display: flex !important; flex-direction: column !important; }
+  .quem-mobile .quem-track { align-items: stretch !important; }
+  .quem-mobile .quem-card { align-self: stretch !important; }
+  @media (max-width: 1023px) {
+    .hero-btn-primary .cta-txt-desktop { display: none !important; }
+    .hero-btn-primary .cta-txt-mobile { display: inline !important; }
+    section#empresas:not(#solucao):not(#como-funciona):not(#faq) { padding-top: 16px !important; }
+    section#problema a[class*="btn-yellow-hover"],
+    #problema a[class*="bg-brand-yellow"][class*="rounded-sm"] { width: 100% !important; max-width: 100% !important; min-width: 0 !important; }
+    #solucao .hero-img-box { background-position: center center !important; background-size: contain !important; }
+    #faq .faq-mobile details:not([open]) > summary { min-height: 64px; }
+    #faq .faq-mobile details { border-radius: 8px !important; }
+  }
+  details > summary { list-style: none; cursor: pointer; }
+  details > summary::-webkit-details-marker { display: none; }
+  details[open] summary .plus { transform: rotate(45deg); }
+  .plus { transition: transform 0.2s; }
+  .preview-banner { position: fixed; bottom: 16px; left: 50%; transform: translateX(-50%); z-index: 100; background: #111111; color: #ffb800; padding: 8px 16px; border-radius: 999px; font-size: 12px; font-weight: 600; box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+  /* CTA flutuante - Falar com especialista (WhatsApp) */
+  #cta-flutuante {
+    position: fixed; right: 24px; bottom: 24px; z-index: 90;
+    display: inline-flex; align-items: center; gap: 10px;
+    background: #25D366; color: #ffffff;
+    padding: 14px 20px; border-radius: 999px;
+    font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 16px; line-height: 1;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.18), 0 2px 6px rgba(0,0,0,0.12);
+    text-decoration: none; transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  }
+  #cta-flutuante:hover { background: #1ebe5b; transform: translateY(-2px); box-shadow: 0 10px 28px rgba(0,0,0,0.22), 0 3px 8px rgba(0,0,0,0.14); }
+  #cta-flutuante:active { transform: translateY(0); }
+  @media (max-width: 1023px) {
+    /* No mobile: botão circular compacto no canto, só o ícone (texto oculto) */
+    #cta-flutuante { right: 16px; bottom: 16px; padding: 14px; gap: 0; }
+    #cta-flutuante .cta-flut-txt { display: none; }
+  }
+  /* Nav link: underline amarelo 8px só em hover/active/focus */
+  .nav-link { position: relative; padding-top: 14px; padding-bottom: 14px; transition: color 0.2s, font-weight 0.2s; font-weight: 500; }
+  .nav-link::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 6px; background: #ffb800; opacity: 0; border-radius: 2px 2px 0 0; transition: opacity 0.2s; }
+  .nav-link:hover::after, .nav-link:focus::after, .nav-link:active::after, .nav-link.is-active::after { opacity: 1; }
+  .nav-link:hover, .nav-link.is-active { font-weight: 700; color: #111; }
+
+  /* ===== Menu mobile (full-screen) — fundo 95%, vê conteúdo atrás; animação sutil ===== */
+  #mobileMenu {
+    position: fixed;
+    top: 88px;            /* abaixo do header mobile (altura 88px) */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255,255,255,0.95);   /* 5% deixa ver o conteúdo atrás */
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    overflow-y: auto;
+    opacity: 0;
+    transform: translateY(-8px);
+    transition: opacity 0.3s ease, transform 0.35s cubic-bezier(0.4,0,0.2,1), visibility 0.3s;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 40;
+  }
+  #mobileMenu.open {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+    pointer-events: auto;
+  }
+  #mobileMenu .mm-inner { padding: 24px 32px 40px 32px; }
+  .mm-section-title {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #e6ac00;
+    margin: 0 0 12px 0;
+  }
+  /* Acesso rápido: 3 cards */
+  .mm-quick { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 32px; }
+  .mm-quick-card {
+    display: flex; flex-direction: column; align-items: flex-start; gap: 12px;
+    padding: 16px; min-height: 104px;
+    background: #f8f6f0; border-radius: 16px;
+    transition: background 0.2s, transform 0.2s;
+  }
+  .mm-quick-card:hover { background: #f1ede1; transform: translateY(-2px); }
+  .mm-quick-icon { display: inline-flex; }
+  .mm-quick-label {
+    font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 600;
+    line-height: 16px; color: #371b01; margin-top: auto;
+  }
+  /* Navegação: item com título + descrição + seta */
+  .mm-nav-item {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 0; border-bottom: 1px solid rgba(55,27,1,0.08);
+    transition: opacity 0.2s;
+  }
+  .mm-nav-item:hover { opacity: 0.7; }
+  .mm-nav-text { display: flex; flex-direction: column; gap: 2px; }
+  .mm-nav-title { font-family: 'DM Sans', sans-serif; font-size: 18px; font-weight: 700; color: #371b01; }
+  .mm-nav-desc { font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 400; color: #2e2e2e; }
+  .mm-chevron { flex-shrink: 0; }
+  /* Rodapé do menu: CTA + Entrar */
+  .mm-footer { margin-top: 40px; display: flex; flex-direction: column; align-items: center; gap: 20px; }
+  .mm-entrar { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 700; color: #371b01; transition: color 0.2s; }
+  .mm-entrar:hover { color: #e6ac00; }
+  /* ícone hambúrguer -> X quando aberto (transição refinada) */
+  #mobileToggle svg path { transition: transform 0.35s cubic-bezier(0.4,0,0.2,1), opacity 0.25s ease; transform-origin: center; transform-box: fill-box; }
+  #mobileToggle.is-open svg path:nth-child(1) { transform: translateY(16px) rotate(45deg); }
+  #mobileToggle.is-open svg path:nth-child(2) { opacity: 0; }
+  #mobileToggle.is-open svg path:nth-child(3) { transform: translateY(-16px) rotate(-45deg); }
+
+  /* ============================================================
+     BASE MOBILE GLOBAL (<768px) — desbaste prévio antes do refino dobra a dobra.
+     Objetivo: nada estoura a viewport de 412px; tudo legível e contido.
+     As dobras com mobile dedicado (Como Funciona, FAQ, Footer) têm suas
+     próprias media queries que prevalecem e não são afetadas aqui.
+     ============================================================ */
+  @media (max-width: 1023px) {
+    /* mata scroll horizontal de qualquer elemento que vaze */
+    html, body { overflow-x: hidden; max-width: 100%; width: 100%; }
+    html { overflow-x: clip; }
+    /* CTA gargalo: texto curto no mobile, completo no desktop */
+    .cta-txt-desktop { display: none !important; }
+    .cta-txt-mobile { display: inline !important; }
+    /* Dobra CTA final: 56px acima da foto (só o padding da section), 32px da imagem ao kicker. */
+    #cta .cta-inner { padding-top: 0 !important; gap: 32px !important; }
+    #cta .cta-textcol { padding-top: 0 !important; }
+
+    /* header mobile (Figma node 6027:13257): pad lateral 32, vertical 16, altura auto */
+    #header .container-fig { height: auto !important; padding-top: 16px !important; padding-bottom: 16px !important; padding-left: 32px !important; padding-right: 32px !important; }
+
+    /* padding lateral das sections: 107px -> 36px (Figma mobile) */
+    section, footer { padding-left: 36px !important; padding-right: 36px !important; }
+
+    /* RESPIRO PADRÃO DO TOPO: 56px de padding-top em todas as dobras (Figma mobile).
+       O hero (#solucao) é exceção: tem diagramação própria (imagem cola no topo). */
+    section:not(#solucao) { padding-top: 56px !important; }
+    /* A dobra Como Funciona controla seu espaço superior via .cf-mobile (24px). Zera o padding-top da section para não somar. */
+    section#como-funciona:not(#solucao) { padding-top: 0 !important; }
+    /* Carrossel Impacto: esconde grade desktop, mostra carrossel no mobile */
+    .impacto-desktop { display: none !important; }
+    .impacto-mobile { display: block !important; }
+    .imp-track::-webkit-scrollbar { display: none; }
+    /* Carrossel Quem está por trás: esconde grade desktop, mostra carrossel no mobile */
+    .quem-desktop { display: none !important; }
+    .quem-mobile { display: block !important; }
+    .quem-track::-webkit-scrollbar { display: none; }
+    /* Blur amarelo decorativo: no mobile, reposiciona pra entrar na tela (antes ficava quase todo
+       fora à esquerda em left:-200). Mais visível mas ainda suave. */
+    #infraestrutura .blur-amarelo { left: -40px !important; top: -40px !important; height: 80% !important; max-width: 80% !important; }
+    /* Defensivo: reveals dentro das versões DESKTOP ocultas (impacto/quem viram carrossel no
+       mobile) nunca disparam o observer por estarem em display:none. Neutraliza o estado inicial
+       pra não ficarem presos em opacity:0 caso a estrutura mude. */
+    .impacto-desktop .reveal, .quem-desktop .reveal { opacity: 1 !important; transform: none !important; }
+    /* Carrosséis sangram até a borda direita no mobile: anulam os 36px laterais da section
+       (margem negativa) e recriam 36px de padding interno -> 1º card alinhado ao título,
+       2º card (e seguintes) vazam até a borda direita mostrando um pedaço. */
+    .imp-track, .quem-track {
+      margin-left: -36px !important;
+      margin-right: -36px !important;
+      padding-left: 36px !important;
+      padding-right: 36px !important;
+      scroll-padding-left: 36px !important;
+    }
+    /* Cards "Quem está por trás" com a mesma altura dos cards da dobra Impacto */
+    .quem-card { min-height: 270px; }
+    /* Dobra Modelos — mobile: fundo branco no topo + bege embaixo, simulando continuidade visual da dobra anterior */
+    section#modelos {
+      background: linear-gradient(to bottom, #ffffff 0, #ffffff 62vw, #f8f6f0 68vw, #f8f6f0 100%) !important;
+    }
+    /* iMac desktop oculto no mobile */
+    #modelos .modelos-imac-desktop { display: none !important; }
+    /* Imagem do iMac (dobra modelos) aparece só no mobile */
+    .modelos-img-mobile { display: block !important; }
+    /* Dobra modelos no mobile: zera padding-top (imagem encosta no topo). O container-fig também perde o padding-top. */
+    section#modelos:not(#solucao) { padding-top: 0 !important; }
+    section#modelos .container-fig { padding-top: 0 !important; padding-left: 0 !important; padding-right: 0 !important; max-width: 100% !important; }
+    /* Container de texto da dobra modelos: fluído com 36px de margem (padrão da LP). */
+    .modelos-texto { width: 100% !important; max-width: 100% !important; margin-left: 0 !important; margin-right: 0 !important; padding-left: 0 !important; }
+    /* Imagem full bleed: compensa os 36px da section (container-fig zerado). Margens simétricas = centralizada. */
+    .modelos-img-mobile { margin-left: auto !important; margin-right: auto !important; width: 100% !important; max-width: 100% !important; display: block !important; object-fit: contain; object-position: center; }
+    /* CTA da dobra modelos: largura total do container (com os 36px de margem da section), em uma linha. */
+    section#modelos a[href="#cta"] { font-size: 16px !important; padding-left: 16px !important; padding-right: 16px !important; display: flex !important; width: 100% !important; max-width: 100% !important; }
+    /* Selos de certificação (dobra Segurança) no mobile: empilhados verticalmente, centralizados, gap 56px entre todos (conforme Figma node 4010-14302). */
+    .selos-cert { padding-left: 0 !important; padding-top: 40px !important; gap: 56px !important; align-items: stretch !important; }
+    /* Cada linha vira coluna empilhada, centralizada, com gap 56px entre os selos internos */
+    .selos-cert > div { flex-direction: column !important; align-items: center !important; gap: 56px !important; padding-top: 0 !important; }
+    .selos-cert img { max-width: 100%; height: auto !important; max-height: 56px; }
+    /* Logo DPO maior que os demais selos (conforme Figma) */
+    .selos-cert img.selo-dpo { max-height: 88px !important; }
+
+    /* ALINHAMENTO À ESQUERDA DOS CABEÇALHOS NO MOBILE (kicker + título + subtítulo).
+       Mira nos blocos de header (div.flex-col.items-start que contém um h2) e neutraliza
+       o text-center / justify-center internos. Não afeta CTAs nem conteúdo dos cards. */
+    section .flex.flex-col.items-start:has(> div h2),
+    section .flex.flex-col.items-start:has(> h2) {
+      align-items: stretch !important;
+    }
+    section .flex.flex-col.items-start:has(> div h2) > div,
+    section .flex.flex-col.items-start:has(> h2) {
+      justify-content: flex-start !important;
+      text-align: left !important;
+    }
+    section .flex.flex-col.items-start:has(h2) h2.text-center,
+    section .flex.flex-col.items-start:has(h2) p.text-center {
+      text-align: left !important;
+    }
+    /* Subtítulos com padding lateral grande (ex: padding: 16px 196px) zeram o lateral no mobile via regra existente; garante alinhamento à esquerda */
+    section .flex.flex-col.items-start:has(h2) > div[style*="padding: 16px 196px"] { text-align: left !important; }
+
+    /* Cabeçalhos com h2.text-center soltos (infraestrutura, empresas): alinha título e subtítulo à esquerda.
+       Mira no h2.text-center e seu container flex justify-center (que NÃO é items-center, pra não pegar CTA). */
+    section h2.text-center { text-align: left !important; }
+    section div.flex.justify-center:not(.items-center):has(> h2),
+    section div.flex.justify-center:not(.items-center):has(> p) { justify-content: flex-start !important; }
+    /* Todos os parágrafos de cabeçalho (kicker/subtítulo) centralizados → esquerda no mobile. CTA usa <a>, não é afetado. */
+    section p.text-center { text-align: left !important; }
+    /* Wrappers de cabeçalho com items-center (ex: empresas) → alinhar itens à esquerda */
+    section .flex.flex-col.items-center:has(h2) { align-items: flex-start !important; }
+    /* Aproxima o CTA "Simular uma operação" da imagem da dobra Como Funciona: 32px no mobile. Especificidade reforçada para superar a regra global com 3x :not(). Desktop mantém o padding inline de 96px. */
+    section#solucao-cta:not(#solucao):not(#como-funciona):not(#faq) { padding-bottom: 32px !important; }
+    /* RESPIRO PADRÃO DA BASE: padding-bottom de desktop (96-140px) é excessivo no mobile.
+       Padroniza em 56px. Seções com mobile dedicado/0 mantêm o seu. */
+    section:not(#solucao):not(#como-funciona):not(#faq) { padding-bottom: 56px !important; }
+
+    /* CORREÇÃO DE ESPAÇOS EM BRANCO: colunas/boxes com altura fixa de desktop
+       reservam espaço vazio no mobile. Neutraliza alturas fixas para auto. */
+    section [style*="height: 521px"],
+    section [style*="height: 520px"],
+    section [style*="height: 620px"],
+    section [style*="height: 600px"],
+    section [style*="height: 512px"],
+    section [style*="height: 480px"],
+    section [style*="height: 460px"],
+    section [style*="height: 440px"],
+    section [style*="height: 420px"],
+    section [style*="height: 400px"] { height: auto !important; }
+
+    /* QUEBRAS DE TEXTO: headlines de 40px (desktop) ficam grandes demais e quebram
+       feio no mobile. Reduz para 28px/34px. Hero e Como Funciona têm regra própria. */
+    section:not(#solucao):not(#como-funciona) h2[style*="font-size: 40px"] {
+      font-size: 32px !important;
+      line-height: 38px !important;
+    }
+
+    /* TIPOGRAFIA MOBILE: títulos de dobra (h2 40px desktop) -> 32px no mobile.
+       Evita quebras feias e títulos gigantes. Hero (h1) tem regra própria. */
+    section h2[style*="font-size: 40px"] { font-size: 32px !important; line-height: 38px !important; }
+    /* Títulos que usam classe .heading (ex: dobra Segurança) sem font-size inline */
+    section h2.heading { font-size: 32px !important; line-height: 38px !important; }
+
+    /* containers fixos viram fluidos */
+    section [style*="max-width: 1153px"],
+    section [style*="max-width: 1152px"] { max-width: 100% !important; }
+
+    /* larguras fixas grandes (colunas, imagens, cards) -> fluidas */
+    section [style*="width: 466px"],
+    section [style*="width: 563px"],
+    section [style*="width: 600px"],
+    section [style*="width: 660px"],
+    section [style*="width: 368px"],
+    section [style*="width: 369px"],
+    section [style*="width: 367px"],
+    section [style*="width: 366px"],
+    section [style*="width: 362px"],
+    section [style*="width: 328px"],
+    section [style*="width: 310px"],
+    section [style*="width: 270px"] { width: 100% !important; max-width: 100% !important; }
+
+    /* imagens nunca estouram */
+    section img { max-width: 100%; height: auto; }
+
+    /* containers flex em linha -> empilham no mobile (exceto onde há mobile dedicado) */
+    section > div[class*="flex"]:not(.faq-mobile):not(.cf-mobile),
+    section .flex[style*="gap"]:not(.footer-bottom) { }
+
+    /* elementos posicionados de forma absoluta que sangram (iMac, shapes decorativos): conter */
+    section .absolute[style*="right: -"],
+    section [style*="right: -72px"] { display: none !important; }
+
+    /* botões de largura fixa 369px -> 100% */
+    a[style*="width: 369px"] { width: 100% !important; max-width: 360px; }
+
+    /* containers de 2 colunas (gap grande) empilham verticalmente no mobile */
+    section [style*="gap: 124px"],
+    section [style*="gap: 120px"],
+    section [style*="gap: 96px"],
+    section [style*="gap: 72px"],
+    section [style*="gap: 64px"] {
+      flex-direction: column !important;
+      gap: 32px !important;
+      align-items: stretch !important;
+    }
+    /* dentro desses, colunas flex-shrink-0 deixam de encolher e ocupam 100% */
+    section [style*="gap: 124px"] > div,
+    section [style*="gap: 120px"] > div,
+    section [style*="gap: 96px"] > div,
+    section [style*="gap: 72px"] > div,
+    section [style*="gap: 64px"] > div { width: 100% !important; max-width: 100% !important; flex-shrink: 1 !important; }
+
+    /* textos com width fixo que quebravam palavra-a-palavra */
+    section p[style*="width: 362px"],
+    section p[style*="width: 366px"],
+    section [style*="width: 328px"],
+    section [style*="width: 600px"] { width: 100% !important; max-width: 100% !important; }
+
+    /* paddings laterais internos enormes (subtitles centralizados) -> 0 no mobile */
+    section [style*="padding: 16px 174px"],
+    section [style*="padding: 16px 196px"],
+    section [style*="padding: 16px 174px 0 174px"],
+    section [style*="padding: 24px 96px"],
+    section [style*="padding: 0 196px"],
+    section [style*="padding: 0 174px"] { padding-left: 0 !important; padding-right: 0 !important; }
+
+    /* grids/flex de cards (4 ou 2 colunas) -> 1 coluna empilhada no mobile */
+    section [style*="grid-template-columns: repeat(4"],
+    section [style*="grid-template-columns: repeat(2"] { grid-template-columns: 1fr !important; }
+    /* EXCEÇÃO: grid de logos da Empresas fica em 2 colunas (mais compacto que 1) */
+    #empresas [style*="grid-template-columns: repeat(4"] { grid-template-columns: repeat(2, 1fr) !important; row-gap: 32px !important; }
+    /* Logos não podem ultrapassar a largura da célula no mobile (max-width fixos do desktop
+       eram maiores que a célula e transbordavam, parecendo desalinhados à direita). */
+    #empresas [style*="grid-template-columns: repeat(4"] img { max-width: 100% !important; }
+    /* flex de cards com altura fixa -> coluna, altura auto */
+    section .flex[style*="height: 248px"],
+    section .flex[style*="height: 160px"] { flex-direction: column !important; height: auto !important; gap: 16px !important; }
+    /* cards individuais -> largura cheia, altura auto */
+    section article[style*="max-width: 368px"],
+    section article[style*="min-width: 270px"] { max-width: 100% !important; min-width: 0 !important; width: 100% !important; height: auto !important; }
+
+    /* ============================================================
+       REGRA GLOBAL: em TODAS as dobras de 2 colunas, a IMAGEM vem
+       ANTES do conteúdo no mobile. A coluna que contém <img> recebe
+       order:-1 e sobe pro topo, independente da ordem no HTML.
+       ============================================================ */
+    section [style*="gap: 124px"] > div:has(img),
+    section [style*="gap: 120px"] > div:has(img),
+    section [style*="gap: 96px"] > div:has(img),
+    section [style*="gap: 72px"] > div:has(img),
+    section [style*="gap: 64px"] > div:has(img) { order: -1 !important; }
+  }
+
+  /* ============ MICROINTERAÇÕES ============ */
+  /* Scroll reveal: estado inicial (invisível, levemente abaixo) -> revelado.
+     Só transform/opacity (GPU, sem reflow). Aplicado via JS com IntersectionObserver. */
+  .reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.6s cubic-bezier(0.16,1,0.3,1), transform 0.6s cubic-bezier(0.16,1,0.3,1); will-change: opacity, transform; }
+  .reveal.is-visible { opacity: 1; transform: translateY(0); }
+  /* Stagger: atrasos progressivos para grupos de elementos */
+  .reveal[data-delay="1"] { transition-delay: 0.08s; }
+  .reveal[data-delay="2"] { transition-delay: 0.16s; }
+  .reveal[data-delay="3"] { transition-delay: 0.24s; }
+  .reveal[data-delay="4"] { transition-delay: 0.32s; }
+  .reveal[data-delay="5"] { transition-delay: 0.40s; }
+
+  /* Hover nos cards: leve elevação + sombra (transform/box-shadow, sem reflow) */
+  .card-hover { transition: transform 0.25s ease, box-shadow 0.25s ease; }
+  @media (max-width: 380px) {
+    section a.btn-yellow-hover,
+    section a.hero-btn-primary,
+    section a.hero-btn-secondary,
+    section a[class*="bg-brand-yellow"] {
+      font-size: 14px !important;
+      padding-top: 14px !important;
+      padding-bottom: 14px !important;
+      letter-spacing: 0 !important;
+    }
+  }
+
+  @media (hover: hover) {
+    .card-hover:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(55,27,1,0.10), 0 4px 10px rgba(55,27,1,0.06); }
+  }
+
+  /* Fade-in suave de imagens grandes ao decodificar (evita "pop" brusco) */
+  img.img-fade { opacity: 0; transition: opacity 0.5s ease; }
+  img.img-fade.is-loaded { opacity: 1; }
+
+  /* CTA flutuante: entrada suave + pulse discreto na 1ª aparição */
+  @keyframes cta-in { from { opacity: 0; transform: translateY(12px) scale(0.96); } to { opacity: 1; transform: translateY(0) scale(1); } }
+  @keyframes cta-pulse { 0%,100% { box-shadow: 0 6px 20px rgba(0,0,0,0.18), 0 0 0 0 rgba(37,211,102,0.45); } 50% { box-shadow: 0 6px 20px rgba(0,0,0,0.18), 0 0 0 10px rgba(37,211,102,0); } }
+  #cta-flutuante { animation: cta-in 0.5s cubic-bezier(0.16,1,0.3,1) 0.6s both; }
+  #cta-flutuante.pulse-once { animation: cta-in 0.5s cubic-bezier(0.16,1,0.3,1) both, cta-pulse 2s ease-in-out 1s 2; }
+
+  /* Acessibilidade: respeita quem prefere menos movimento — desliga tudo */
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+    .card-hover { transition: none !important; }
+    .card-hover:hover { transform: none !important; }
+    img.img-fade { opacity: 1 !important; transition: none !important; }
+    #cta-flutuante, #cta-flutuante.pulse-once { animation: none !important; }
+  }
+
+/* ===== Ajustes LP Jurídico ===== */
+/* Hero estático: texto flui sem sobrepor os botões */
+#hero-slider[data-slider-enabled="false"] .hero-slides-area { position: static !important; min-height: 0 !important; }
+#hero-slider[data-slider-enabled="false"] .hero-slides-area .hero-slide[data-slide="0"] { position: static !important; }
+#hero-slider .hero-col-text { min-height: 0 !important; }
+/* Espaço entre os 2 botões do hero (e respiro acima) */
+#hero-slider .hero-buttons { margin-top: 12px !important; gap: 16px !important; }
+/* Dobra Problema: cada item em uma linha só (desktop) */
+@media (min-width: 768px) { .prob-bullets span { white-space: nowrap; } }
+
+/* Tipos de guia — lista: remove a divisória do último item de cada coluna */
+.guia-col .guia-item:last-child { border-bottom: none; }
+@media (max-width: 1023px) { .guia-list { grid-template-columns: 1fr !important; } }
+
+/* Sombras sutis (drop-shadow segue a máscara) nas fotos que não têm sombra própria */
+img[src*="secao-gargalo"], img[src*="secao-solucao"], img[src*="secao-faq"],
+img[src*="secao-cta-final"], img[src*="autoridade-juridico"] {
+  filter: drop-shadow(0 12px 26px rgba(55,27,1,0.10)) drop-shadow(0 4px 8px rgba(55,27,1,0.06));
+}
+
+/* Bento "O que dá para parcelar": colapsa spans em telas desktop menores */
+@media (max-width: 1180px) and (min-width: 1024px) {
+  .bento-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .bento-tile { grid-column: span 1 !important; }
+}
+
+/* Tipos de guia (lista): equilibra a quebra de linha das descrições */
+.guia-item p { text-wrap: pretty; }
+
+/* === Boas práticas: acessibilidade & motion === */
+a:focus-visible, button:focus-visible, summary:focus-visible, [tabindex]:focus-visible {
+  outline: 3px solid #371b01; outline-offset: 2px; border-radius: 4px;
+}
+.skip-link { position:absolute; left:-9999px; top:0; z-index:100; background:#371b01; color:#fff;
+  padding:12px 18px; border-radius:0 0 8px 0; font-family:'DM Sans',sans-serif; font-weight:700; font-size:14px; }
+.skip-link:focus { left:0; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration:0.001ms !important; animation-iteration-count:1 !important;
+    transition-duration:0.001ms !important; scroll-behavior:auto !important; }
+}
+
+/* === Growth: CTA fixo no mobile === */
+.sticky-cta { display:none; }
+@media (max-width: 1023px) {
+  .sticky-cta { display:flex; position:fixed; left:12px; right:12px; bottom:12px; z-index:60;
+    align-items:center; justify-content:center; gap:8px; background:#ffb800; color:#371b01;
+    font-family:'DM Sans',sans-serif; font-weight:700; font-size:16px; padding:15px 20px;
+    border-radius:999px; box-shadow:0 8px 24px rgba(0,0,0,0.18); text-decoration:none; }
+  .sticky-cta:active { transform: translateY(1px); }
+  body { padding-bottom: 80px; } /* reserva espaço pro CTA fixo */
+}
+/* === Responsividade tablet: Mercados em 2 colunas (768–1023px) === */
+@media (max-width: 1023px) and (min-width: 768px) {
+  #mercados .merc-cards > article { flex: 1 1 calc(50% - 12px) !important; max-width: none !important; }
+}

@@ -1,0 +1,1656 @@
+
+
+<!-- ============ HEADER ============ -->
+<a href="#conteudo" class="skip-link">Pular para o conteúdo</a>
+<header id="header" class="fixed inset-x-0 top-0 z-50 bg-white backdrop-blur transition border-b border-brand-text-muted/10">
+  <div class="container-fig flex h-[72px] items-center justify-between">
+    <a href="#solucao" class="flex items-center gap-2" aria-label="Parcele Aqui - voltar ao início">
+      <img src="/images/logo-parcele-aqui.svg" alt="Parcele Aqui" class="h-9 w-auto" />
+    </a>
+    <nav class="hidden lg:flex items-center gap-10" aria-label="Navegação principal">
+      <a href="#como-funciona" class="nav-link text-base text-brand-text-secondary">Como funciona</a>
+      <a href="#quem-somos" class="nav-link text-base text-brand-text-secondary">Sobre nós</a>
+      <a href="#solucao" class="nav-link text-base text-brand-text-secondary">Soluções</a>
+    </nav>
+    <div class="flex items-center gap-5">
+      <a href="https://wa.me/5531973322921?text=Ol%C3%A1%21%20Vim%20da%20Landing%20Page%20Parcele%20Aqui%20Jur%C3%ADdico%20e%20quero%20fazer%20uma%20simula%C3%A7%C3%A3o%20de%20parcelamento%20para%20o%20meu%20escrit%C3%B3rio." target="_blank" rel="noopener" class="btn-primary hidden lg:inline-flex" style="padding: 12px 20px; font-size: 14px;">Quero simular parcelamento</a>
+      <a href="https://parceleaqui.com.br/login" target="_blank" rel="noopener" class="hidden sm:inline-flex text-sm font-bold" style="color: #111; transition: color 0.2s;" onmouseover="this.style.color='#e6ac00'" onmouseout="this.style.color='#111'">Entrar</a>
+      <button id="mobileToggle" class="lg:hidden inline-flex items-center justify-center" style="padding: 16px; color: #371b01;" aria-label="Menu">
+        <svg width="32" height="32" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 8H40" stroke="#371B01" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M8 24H40" stroke="#371B01" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M8 40H40" stroke="#371B01" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Menu mobile full-screen (fora do header para position:fixed referir ao viewport) -->
+<nav id="mobileMenu" class="lg:hidden" aria-hidden="true">
+  <div class="mm-inner">
+
+    <!-- Acesso rápido (3 cards de ação) -->
+    <p class="mm-section-title">Acesso rápido</p>
+    <div class="mm-quick">
+      <a href="https://wa.me/5531973322921?text=Ol%C3%A1%21%20Vim%20da%20Landing%20Page%20Parcele%20Aqui%20Jur%C3%ADdico%20e%20quero%20fazer%20uma%20simula%C3%A7%C3%A3o%20de%20parcelamento%20para%20o%20meu%20escrit%C3%B3rio." target="_blank" rel="noopener" class="mm-quick-card">
+        <span class="mm-quick-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z" stroke="#371B01" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="mm-quick-label">Simule agora</span>
+      </a>
+      <a href="https://wa.me/5531973322921?text=Ol%C3%A1%21%20Vim%20da%20Landing%20Page%20Parcele%20Aqui%20Jur%C3%ADdico%20e%20gostaria%20de%20falar%20com%20um%20especialista." target="_blank" rel="noopener" class="mm-quick-card">
+        <span class="mm-quick-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5Z" stroke="#371B01" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="mm-quick-label">Falar com especialista</span>
+      </a>
+      <a href="#faq" class="mm-quick-card">
+        <span class="mm-quick-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3" stroke="#371B01" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 17h.01" stroke="#371B01" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="12" r="9.5" stroke="#371B01" stroke-width="1.75"/></svg>
+        </span>
+        <span class="mm-quick-label">Tire suas dúvidas</span>
+      </a>
+    </div>
+
+    <!-- Navegação (item: título + descrição + seta) -->
+    <p class="mm-section-title">Navegação</p>
+    <a href="#como-funciona" class="mm-nav-item">
+      <span class="mm-nav-text">
+        <span class="mm-nav-title">Como funciona</span>
+        <span class="mm-nav-desc">O fluxo de parcelamento na prática</span>
+      </span>
+      <svg class="mm-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="m9 6 6 6-6 6" stroke="#371B01" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+    <a href="#quem-somos" class="mm-nav-item">
+      <span class="mm-nav-text">
+        <span class="mm-nav-title">Sobre nós</span>
+        <span class="mm-nav-desc">Conheça a Potencial Tecnologia</span>
+      </span>
+      <svg class="mm-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="m9 6 6 6-6 6" stroke="#371B01" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+    <a href="#solucao" class="mm-nav-item">
+      <span class="mm-nav-text">
+        <span class="mm-nav-title">Soluções</span>
+        <span class="mm-nav-desc">Modelos para o seu negócio</span>
+      </span>
+      <svg class="mm-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="m9 6 6 6-6 6" stroke="#371B01" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+
+    <!-- Rodapé fixo: CTA + Entrar -->
+    <div class="mm-footer">
+      <a href="https://wa.me/5531973322921?text=Ol%C3%A1%21%20Vim%20da%20Landing%20Page%20Parcele%20Aqui%20Jur%C3%ADdico%20e%20quero%20fazer%20uma%20simula%C3%A7%C3%A3o%20de%20parcelamento%20para%20o%20meu%20escrit%C3%B3rio." target="_blank" rel="noopener" class="btn-primary" style="width: 100%; padding: 16px 24px; font-size: 16px;">Quero simular parcelamento</a>
+      <a href="https://parceleaqui.com.br/login" target="_blank" rel="noopener" class="mm-entrar">Entrar</a>
+    </div>
+
+  </div>
+</nav>
+
+<main id="conteudo" class="pt-[72px]">
+
+<!-- ============ DOBRA HERO ============ -->
+<section id="solucao" class="bg-white relative" style="padding: 32px 107px 32px 107px;">
+  <div class="hero-wrap flex items-start justify-center w-full" style="max-width: 1153px; margin: 0 auto;">
+
+    <!-- HERO SLIDER (3 slides)
+         data-slider-enabled controla o modo do hero:
+           "false" = HERO ESTÁTICO (mostra só o slide 0, sem setas/bolinhas/autoplay) — modo atual
+           "true"  = SLIDER ATIVO (3 slides com autoplay e controles)
+         O slider permanece 100% no código; trocar para "true" reativa tudo (futuro, via CRM/painel). -->
+    <div id="hero-slider" class="flex items-start w-full" style="padding-top: 0;" data-current="0" data-total="3" data-slider-enabled="false">
+
+      <!-- ===== COLUNA ESQUERDA: Texto (3 variações) + botões FIXOS ===== -->
+      <div class="hero-col-text flex-1 flex flex-col relative" style="padding-top: 56px; gap: 8px; max-width: 600px; min-height: 540px;">
+
+        <!-- área dos slides com altura fixa para os botões não se moverem -->
+        <div class="hero-slides-area" style="position: relative; min-height: 380px;">
+        <div class="hero-slide" data-slide="0" style="display: flex; flex-direction: column; gap: 8px;">
+          <p class="hero-kicker" style="font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 16px; line-height: 24px; color: #2e2e2e;"><span class="kicker-full">Parcelamento para o mercado jurídico</span><span class="kicker-short">Parcelamento jurídico</span></p>
+          <h1 style="font-family: 'Kufam', sans-serif; font-size: 40px; line-height: 48px; letter-spacing: 0.2px; color: #371b01; font-weight: 400; margin-top: 0;">
+            <span style="font-weight: 400;">Transforme custas, guias e honorários em </span><span style="font-weight: 700;" class="parcelamento-bold">parcelamento no cartão</span>
+          </h1>
+          <p style="font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 16px; line-height: 24px; color: #371b01; margin-top: 0;">
+            Tribunais, escritórios, OAB e cartórios oferecem o pagamento de custas processuais, fianças, guias judiciais e honorários em até 12x, enquanto a guia é liquidada à vista para o emissor.
+          </p>
+          <ul class="flex flex-col" style="padding: 16px 0; gap: 16px;">
+            <li class="flex items-start" style="gap: 8px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="flex-shrink-0"><path d="M5 12h14M13 6l6 6-6 6" stroke="#ffb800" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #2e2e2e;">Mais guias quitadas</span></li>
+            <li class="flex items-start" style="gap: 8px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="flex-shrink-0"><path d="M5 12h14M13 6l6 6-6 6" stroke="#ffb800" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #2e2e2e;">Menos inadimplência</span></li>
+            <li class="flex items-start" style="gap: 8px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="flex-shrink-0"><path d="M5 12h14M13 6l6 6-6 6" stroke="#ffb800" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #2e2e2e;">Zero risco de recebimento</span></li>
+          </ul>
+        </div>
+
+        <!-- SLIDE 2 -->
+        <div class="hero-slide" data-slide="1" style="display: none; flex-direction: column; gap: 8px;">
+          <p class="hero-kicker" data-kicker-full="Parcelamento para o mercado jurídico" data-kicker-short="Parcelamento jurídico" style="font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 16px; line-height: 24px; color: #2e2e2e;">Parcelamento para o mercado jurídico</p>
+          <h2 style="font-family: 'Kufam', sans-serif; font-size: 40px; line-height: 48px; letter-spacing: 0.2px; color: #371b01; font-weight: 400; margin-top: 0;">
+            <span style="font-weight: 400;">Transforme custas, guias e honorários em </span><span style="font-weight: 700;" class="parcelamento-bold">parcelamento no cartão</span>
+          </h2>
+          <p style="font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 16px; line-height: 24px; color: #371b01; margin-top: 0;">
+            Tribunais, escritórios, OAB e cartórios oferecem o pagamento de custas processuais, fianças, guias judiciais e honorários em até 12x, enquanto a guia é liquidada à vista para o emissor.
+          </p>
+          <ul class="flex flex-col" style="padding: 16px 0; gap: 16px;">
+            <li class="flex items-start" style="gap: 8px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="flex-shrink-0"><path d="M5 12h14M13 6l6 6-6 6" stroke="#ffb800" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #2e2e2e;">Mais guias quitadas</span></li>
+            <li class="flex items-start" style="gap: 8px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="flex-shrink-0"><path d="M5 12h14M13 6l6 6-6 6" stroke="#ffb800" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #2e2e2e;">Menos inadimplência</span></li>
+            <li class="flex items-start" style="gap: 8px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="flex-shrink-0"><path d="M5 12h14M13 6l6 6-6 6" stroke="#ffb800" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #2e2e2e;">Zero risco de recebimento</span></li>
+          </ul>
+        </div>
+
+        <!-- SLIDE 3 -->
+        <div class="hero-slide" data-slide="2" style="display: none; flex-direction: column; gap: 8px;">
+          <p class="hero-kicker" data-kicker-full="Parcelamento para o mercado jurídico" data-kicker-short="Parcelamento jurídico" style="font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 16px; line-height: 24px; color: #2e2e2e;">Parcelamento para o mercado jurídico</p>
+          <h2 style="font-family: 'Kufam', sans-serif; font-size: 40px; line-height: 48px; letter-spacing: 0.2px; color: #371b01; font-weight: 400; margin-top: 0;">
+            <span style="font-weight: 400;">Transforme custas, guias e honorários em </span><span style="font-weight: 700;" class="parcelamento-bold">parcelamento no cartão</span>
+          </h2>
+          <p style="font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 16px; line-height: 24px; color: #371b01; margin-top: 0;">
+            Tribunais, escritórios, OAB e cartórios oferecem o pagamento de custas processuais, fianças, guias judiciais e honorários em até 12x, enquanto a guia é liquidada à vista para o emissor.
+          </p>
+          <ul class="flex flex-col" style="padding: 16px 0; gap: 16px;">
+            <li class="flex items-start" style="gap: 8px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="flex-shrink-0"><path d="M5 12h14M13 6l6 6-6 6" stroke="#ffb800" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #2e2e2e;">Mais guias quitadas</span></li>
+            <li class="flex items-start" style="gap: 8px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="flex-shrink-0"><path d="M5 12h14M13 6l6 6-6 6" stroke="#ffb800" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #2e2e2e;">Menos inadimplência</span></li>
+            <li class="flex items-start" style="gap: 8px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="flex-shrink-0"><path d="M5 12h14M13 6l6 6-6 6" stroke="#ffb800" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #2e2e2e;">Zero risco de recebimento</span></li>
+          </ul>
+        </div>
+        </div><!-- /hero-slides-area -->
+
+        <!-- BOTÕES FIXOS (compartilhados, não mudam entre slides) -->
+        <div class="hero-buttons flex flex-col" style="gap: 16px; width: fit-content; max-width: 100%; margin-top: 32px;">
+          <a href="https://wa.me/5531973322921?text=Ol%C3%A1%21%20Vim%20da%20Landing%20Page%20Parcele%20Aqui%20Jur%C3%ADdico%20e%20quero%20entender%20como%20o%20Parcele%20Aqui%20funciona%20no%20meu%20escrit%C3%B3rio." target="_blank" rel="noopener" class="hero-btn-primary inline-flex items-center justify-center bg-brand-yellow btn-yellow-hover rounded-sm transition" style="width: 100%; min-width: 0; white-space: nowrap; padding: 16px 32px; font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 18px; line-height: 24px; color: #371b01; box-shadow: 0 4px 24px rgba(0,0,0,0.08), 0 0 4px rgba(0,0,0,0.08), 0 0 16px rgba(0,0,0,0.08);"><span class="cta-txt-desktop">Ver como funciona na prática</span><span class="cta-txt-mobile" style="display:none;">Ver como funciona</span></a>
+          <a href="https://wa.me/5531973322921?text=Ol%C3%A1%21%20Vim%20da%20Landing%20Page%20Parcele%20Aqui%20Jur%C3%ADdico%20e%20gostaria%20de%20falar%20com%20um%20especialista." target="_blank" rel="noopener" class="hero-btn-secondary inline-flex items-center justify-center rounded-sm transition" style="width: 100%; min-width: 0; white-space: nowrap; padding: 16px 32px; font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 18px; line-height: 24px; color: #371b01; border: 1px solid #371b01; background: transparent;" onmouseover="this.style.background='#371b01'; this.style.color='#ffffff';" onmouseout="this.style.background='transparent'; this.style.color='#371b01';">Falar com um especialista</a>
+        </div>
+      </div>
+
+      <!-- ===== COLUNA DIREITA: Imagem + setas + contador ===== -->
+      <div class="hero-col-img relative flex-shrink-0" style="width: 660px;">
+        <div class="hero-img-box relative" style="width: 660px; height: 620px;">
+          <img class="hero-slide-img" data-slide="0" fetchpriority="high" src="/images/sections/hero-slide-1.webp" width="1351" height="1400" alt="Profissional sorridente com tablet" style="display: block; width: 100%; height: 100%; object-fit: contain; position: absolute; top: 0; left: 0;" />
+          <img class="hero-slide-img" data-slide="1" src="/images/sections/hero-slide-2.webp" width="2648" height="2480" alt="Profissional aprovando contrato comercial" style="display: none; width: 100%; height: 100%; object-fit: contain; position: absolute; top: 0; left: 0;" />
+          <img class="hero-slide-img" data-slide="2" src="/images/sections/hero-slide-3.webp" width="2648" height="2480" alt="Time comemorando fechamento rápido de venda" style="display: none; width: 100%; height: 100%; object-fit: contain; position: absolute; top: 0; left: 0;" />
+        </div>
+
+        <!-- Setas -->
+        <div class="hero-arrows absolute flex flex-col z-20" style="top: 444px; left: 4px; gap: 16px;">
+          <button id="hero-prev" class="inline-flex items-center justify-center transition" style="padding: 16px; border-radius: 8px; box-shadow: 0 4px 5px rgba(0,0,0,0.25); width: 56px; height: 56px;" aria-label="Anterior">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M19 12H5M12 19l-7-7 7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <button id="hero-next" class="inline-flex items-center justify-center transition" style="padding: 16px; border-radius: 8px; box-shadow: 0 4px 5px rgba(0,0,0,0.25); width: 56px; height: 56px;" aria-label="Próximo">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+
+        <!-- Contador (3 dots) -->
+        <div class="hero-dots absolute flex items-center justify-end z-20" style="top: 589px; right: 0; gap: 8px; width: 100%; padding-right: 16px;">
+          <button class="hero-dot rounded-full transition" data-slide="0" aria-label="Slide 1" style="height: 8px; width: 8px; background: #ffb800; padding: 0; border: none; cursor: pointer;"></button>
+          <button class="hero-dot rounded-full transition" data-slide="1" aria-label="Slide 2" style="height: 8px; width: 8px; background: #371b01; padding: 0; border: none; cursor: pointer;"></button>
+          <button class="hero-dot rounded-full transition" data-slide="2" aria-label="Slide 3" style="height: 8px; width: 8px; background: #371b01; padding: 0; border: none; cursor: pointer;"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* kicker: full no desktop, short no mobile */
+  .kicker-short { display: none; }
+  /* desktop: slides sobrepostos (absolutos) para a área ter altura fixa e os botões não se moverem */
+  .hero-slides-area { position: relative; }
+  .hero-slides-area .hero-slide { position: absolute; top: 0; left: 0; width: 100%; }
+  #hero-slider[data-slider-enabled="false"] .hero-slide:not([data-slide="0"]) { display: none !important; }
+  /* sombra de elevação na imagem do hero (desktop) — segue o contorno do shape */
+  .hero-img-box .hero-slide-img { filter: none; }
+  /* ===== HOVER das setas do hero (CSS robusto) ===== */
+  #hero-prev { background: #371b01; }
+  #hero-prev svg path { stroke: #ffb800; }
+  #hero-prev:hover { background: #ffb800; }
+  #hero-prev:hover svg path { stroke: #371b01; }
+  #hero-next { background: #ffb800; }
+  #hero-next svg path { stroke: #371b01; }
+  #hero-next:hover { background: #371b01; }
+  #hero-next:hover svg path { stroke: #ffb800; }
+  #hero-prev, #hero-next, #hero-prev svg path, #hero-next svg path { transition: background .2s ease, stroke .2s ease; }
+  /* ===== HERO MOBILE (<768px): imagem em cima -> texto -> botões largura total + contador ===== */
+  @media (max-width: 1023px) {
+    .kicker-full { display: none; }
+    .kicker-short { display: inline; }
+    /* mobile: slides voltam ao fluxo normal (não absolutos) */
+    #solucao .hero-slides-area { min-height: 0 !important; }
+    #solucao .hero-slides-area .hero-slide { position: relative !important; }
+    #solucao .hero-slider, #solucao #hero-slider { flex-direction: column !important; }
+    /* imagem primeiro; vira âncora de posicionamento das setas */
+    #solucao .hero-col-img { order: -1 !important; width: 100% !important; position: relative !important; }
+    /* mobile usa a imagem dedicada (formato domo) como background do box */
+    #solucao .hero-img-box {
+      /* v51 — Hero mobile centralizado (sem sangramento). */
+      width: 100% !important;
+      max-width: 100% !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      height: auto !important;
+      aspect-ratio: 689 / 696;
+      background-image: url('/images/sections/hero-slide-mobile-1.webp');
+      background-size: contain;
+      background-position: center center;
+      background-repeat: no-repeat;
+      /* sombra de elevação suave que acompanha o contorno do shape (domo) */
+      filter: none;
+      padding-bottom: 0 !important;
+    }
+    /* esconde as imagens desktop no mobile (JS controla display inline, por isso o !important) */
+    #solucao .hero-img-box .hero-slide-img { display: none !important; }
+    /* texto depois; respiro reduzido após o contador */
+    #solucao .hero-col-text { order: 1 !important; padding-top: 12px !important; max-width: 100% !important; min-height: 0 !important; }
+    /* kicker resumido: esconde o full, mostra o short */
+    #solucao .hero-kicker { font-size: 14px !important; }
+    /* h1 menor no mobile */
+    #solucao .hero-col-text h1, #solucao .hero-col-text h2 { font-size: 32px !important; line-height: 40px !important; }
+    /* botões: largura total da tela */
+    #solucao .hero-buttons { width: 100% !important; }
+    #solucao .hero-btn-primary, #solucao .hero-btn-secondary { width: 100% !important; }
+    /* setas: empilhadas na vertical, ancoradas na parte de baixo-esquerda da imagem,
+       sobrepondo a borda esquerda (igual ao Figma). Ancoradas à imagem (não ao texto),
+       então NÃO variam com o volume de texto. */
+    #solucao .hero-arrows {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      justify-content: flex-end !important;
+      position: absolute !important;
+      bottom: 73px !important;
+      left: -8px !important;
+      top: auto !important;
+      right: auto !important;
+      transform: none !important;
+      width: auto !important;
+      padding: 0 !important;
+      gap: 12px !important;
+      z-index: 20 !important;
+    }
+    /* setas menores no mobile, encaixadas sobre a imagem */
+    #solucao .hero-arrows > button { width: 44px !important; height: 44px !important; padding: 11px !important; }
+    #solucao .hero-arrows > button svg { width: 20px !important; height: 20px !important; }
+    /* contador: alinhado à direita (como desktop), abaixo da imagem */
+    #solucao .hero-dots { position: static !important; justify-content: flex-end !important; padding: 12px 4px 0 0 !important; margin-top: 0 !important; width: 100% !important; }
+  }
+</style>
+
+
+<!-- ============ HERO SLIDER SCRIPT ============ -->
+
+
+<!-- ============ DOBRA 10 - INFRAESTRUTURA ============ -->
+<section id="infraestrutura" class="bg-white relative" style="padding: 48px 107px 88px 107px;">
+  <!-- Blur amarelo decorativo à esquerda (SVG oficial do Figma, extrapola pra dobra abaixo) -->
+  <img loading="lazy" decoding="async" src="/images/sections/blur-amarelo.svg" alt="" aria-hidden="true" class="blur-amarelo absolute -z-0 pointer-events-none" style="left: 0px; top: -100px; height: 180%; width: auto; max-width: 90%;" />
+
+  <div class="relative z-10 flex flex-col" style="gap: 48px; max-width: 1153px; margin: 0 auto;">
+    <!-- Header centralizado -->
+    <div class="flex flex-col w-full">
+      <!-- Kicker centralizado -->
+      <div class="flex justify-center" style="padding-bottom: 4px;">
+        <p style="font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 16px; line-height: 24px; color: #2e2e2e;">Credibilidade comprovada</p>
+      </div>
+
+      <!-- Headline (Kufam 40/48, letter 0.2, cor #111) -->
+      <div class="flex justify-center">
+        <h2 class="text-center" style="font-family: 'Kufam', sans-serif; font-size: 40px; line-height: 48px; letter-spacing: 0.2px; color: #371b01; max-width: 1152px;">
+          <span style="font-weight: 400;">Prova de credibilidade<br/></span><span style="font-weight: 700;">que sustenta cada transação</span>
+        </h2>
+      </div>
+
+      <!-- Subtitle (centralizado, px-174 conforme Figma) -->
+      <div class="w-full" style="padding: 16px 174px 0 174px;">
+        <p class="text-center" style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #2e2e2e;">Você oferece uma solução financeira confiável,<br/>respaldada por tecnologia, experiência e parceiros líderes do mercado.</p>
+      </div>
+    </div>
+
+    <!-- 4 cards (h-248 items-end, gap-24) -->
+    <div class="infra-cards flex w-full" style="gap: 24px; height: 248px;">
+      <!-- Card 01: Liquidação à vista e sem risco (file com $) -->
+      <article class="flex flex-col items-start justify-center card-hover reveal" data-delay="1" style="background: #f8f6f0; border: 2px solid #ffb800; border-radius: 32px; padding: 24px 14px; flex: 1 0 0; max-width: 420px; min-width: 270px; height: 100%;">
+        <div class="flex flex-col" style="gap: 8px;">
+          <!-- Ícone request_quote (oficial Figma) -->
+          <img loading="lazy" decoding="async" src="/images/icons/ic-fintech.svg" alt="" aria-hidden="true" style="width: 48px; height: 48px;" />
+          <h3 style="font-family: 'Kufam', sans-serif; font-weight: 700; font-size: 20px; line-height: 24px; letter-spacing: 0.5px; color: #371b01;">Fintech<br/>brasileira</h3>
+          <p style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #371b01;">Solução desenvolvida no Brasil, alinhada às regras, tributos e rotinas do setor jurídico.</p>
+        </div>
+      </article>
+
+      <!-- Card 02: Infraestrutura certificada e escalável (lock) -->
+      <article class="flex flex-col items-start justify-center card-hover reveal" data-delay="2" style="background: #f8f6f0; border: 2px solid #ffb800; border-radius: 32px; padding: 24px 14px; flex: 1 0 0; max-width: 420px; min-width: 270px; height: 100%;">
+        <div class="flex flex-col" style="gap: 8px;">
+          <!-- Ícone lock (oficial Figma) -->
+          <img loading="lazy" decoding="async" src="/images/icons/ic-25anos.svg" alt="" aria-hidden="true" style="width: 48px; height: 48px;" />
+          <h3 style="font-family: 'Kufam', sans-serif; font-weight: 700; font-size: 20px; line-height: 24px; letter-spacing: 0.1px; color: #371b01;">+25 anos<br/>de tecnologia</h3>
+          <p style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #371b01;">Mais de duas décadas criando soluções financeiras robustas e escaláveis.</p>
+        </div>
+      </article>
+
+      <!-- Card 03: Plataforma 100% digital e automatizada (flowchart) -->
+      <article class="flex flex-col items-start justify-center card-hover reveal" data-delay="3" style="background: #f8f6f0; border: 2px solid #ffb800; border-radius: 32px; padding: 24px 14px; flex: 1 0 0; max-width: 420px; min-width: 270px; height: 100%;">
+        <div class="flex flex-col" style="gap: 8px;">
+          <!-- Ícone flowchart (oficial Figma) -->
+          <img loading="lazy" decoding="async" src="/images/icons/ic-infra.svg" alt="" aria-hidden="true" style="width: 48px; height: 48px;" />
+          <h3 style="font-family: 'Kufam', sans-serif; font-weight: 700; font-size: 20px; line-height: 24px; letter-spacing: -0.2px; color: #371b01;">Infraestrutura<br/>certificada</h3>
+          <p style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #371b01;">Padrões rigorosos de proteção de dados, conformidade e operação contínua.</p>
+        </div>
+      </article>
+
+      <!-- Card 04: Fintech brasileira especializada em B2B (chip com $) -->
+      <article class="flex flex-col items-start justify-center card-hover reveal" data-delay="4" style="background: #f8f6f0; border: 2px solid #ffb800; border-radius: 32px; padding: 24px 14px; flex: 1 0 0; max-width: 420px; min-width: 270px; height: 100%;">
+        <div class="flex flex-col" style="gap: 8px;">
+          <!-- Ícone chip com $ (oficial Figma) -->
+          <img loading="lazy" decoding="async" src="/images/icons/ic-aprovado.svg" alt="" aria-hidden="true" style="width: 48px; height: 48px;" />
+          <h3 style="font-family: 'Kufam', sans-serif; font-weight: 700; font-size: 20px; line-height: 24px; letter-spacing: 0.1px; color: #371b01;">Transações aprovadas<br/>com confiabilidade</h3>
+          <p style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #371b01;">Integração com as principais adquirentes do mercado e alta taxa de aprovação</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ===== INFRAESTRUTURA MOBILE (<768px): cabeçalho responsivo + cards empilhados ===== */
+  @media (max-width: 1023px) {
+    #infraestrutura { padding-bottom: 48px !important; }
+    #infraestrutura > div { gap: 24px !important; }
+    /* cabeçalho: tipografia mobile */
+    #infraestrutura h2 { font-size: 32px !important; line-height: 38px !important; }
+    /* subtitle: remove o padding lateral gigante do desktop */
+    #infraestrutura div[style*="padding: 16px 174px"] { padding: 16px 0 0 0 !important; }
+    /* cards: empilhados verticalmente, largura total */
+    #infraestrutura .infra-cards {
+      flex-direction: column !important;
+      height: auto !important;
+      gap: 16px !important;
+    }
+    #infraestrutura .infra-cards > article {
+      width: 100% !important;
+      max-width: 100% !important;
+      min-width: 0 !important;
+      height: auto !important;
+      padding: 24px !important;
+    }
+  }
+</style>
+
+<!-- ============ DOBRA 01 - PROBLEMA / GARGALO ============ -->
+<section class="relative" style="background: #f8f6f0; padding: 112px 107px 112px 107px;">
+  <div class="flex items-center" style="gap: 124px; max-width: 1153px; margin: 0 auto;">
+    <!-- COLUNA ESQUERDA: Foto com shape amarelo atrás -->
+    <div class="relative flex-shrink-0" style="width: 563px; height: 521px;">
+      <!-- PNG transparente com foto + shape amarelo embutidos -->
+      <img loading="lazy" decoding="async" src="/images/sections/secao-gargalo.webp" width="1174" height="1090" alt="Profissional confiante em ambiente jurídico" class="block img-fade" style="width: 100%; height: auto;" />
+    </div>
+
+    <!-- COLUNA DIREITA: Texto + bullets + CTA -->
+    <div class="flex flex-col" style="gap: 8px; width: 466px;">
+      <!-- Kicker -->
+      <p style="font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 16px; line-height: 24px; color: #2e2e2e;">O desafio do setor</p>
+
+      <!-- Headline (Kufam 40/48, regular + bold) -->
+      <h2 style="font-family: 'Kufam', sans-serif; font-size: 40px; line-height: 48px; letter-spacing: 0.2px; color: #371b01; font-weight: 400;">
+        <span style="font-weight: 400;">O custo que trava </span><span style="font-weight: 700;">o acesso à Justiça</span>
+      </h2>
+
+      <!-- Body container (pt-6, gap-16) -->
+      <div class="flex flex-col" style="gap: 16px; padding-top: 6px;">
+        <!-- Subtitle -->
+        <p style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #2e2e2e;">Custas processuais, fianças, guias judiciais e honorários costumam ser altos e pouco previsíveis, travando o andamento dos processos e a arrecadação.</p>
+
+        <!-- Sub-bloco: H4 + bullets -->
+        <div class="flex flex-col" style="gap: 8px; width: 100%;">
+          <!-- H4: Kufam Bold 20/24 letter 0.5 -->
+          <p style="font-family: 'Kufam', sans-serif; font-weight: 700; font-size: 20px; line-height: 24px; letter-spacing: 0.5px; color: #371b01; width: 100%;">Quando o valor não cabe à vista,<br/>o processo trava:</p>
+
+          <!-- Bullets (pt-8, gap-16, w-328) -->
+          <div class="flex flex-col prob-bullets" style="gap: 16px; padding-top: 8px; width: 100%;">
+            <div class="flex items-start" style="gap: 8px;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="flex-shrink-0">
+                <path d="M5 12h14M13 6l6 6-6 6" stroke="#ffb800" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #2e2e2e;">Custas e guias deixadas em aberto</span>
+            </div>
+            <div class="flex items-start" style="gap: 8px;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="flex-shrink-0">
+                <path d="M5 12h14M13 6l6 6-6 6" stroke="#ffb800" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #2e2e2e;">Guias judiciais e fianças que pesam no caixa</span>
+            </div>
+            <div class="flex items-start" style="gap: 8px;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="flex-shrink-0">
+                <path d="M5 12h14M13 6l6 6-6 6" stroke="#ffb800" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #2e2e2e;">Honorários e despesas que o cliente não consegue quitar</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Texto final -->
+        <p style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #2e2e2e;">Sem uma opção flexível de pagamento, a guia fica em aberto e o processo emperra.</p>
+      </div>
+
+      <!-- CTA (pt-14, font 18 Inter Bold, triple shadow) -->
+      <div style="padding-top: 14px;">
+        <a href="https://wa.me/5531973322921?text=Ol%C3%A1%21%20Vim%20da%20Landing%20Page%20Parcele%20Aqui%20Jur%C3%ADdico%20e%20quero%20entender%20se%20o%20Parcele%20Aqui%20faz%20sentido%20para%20o%20meu%20escrit%C3%B3rio." target="_blank" rel="noopener" class="inline-flex items-center justify-center bg-brand-yellow btn-yellow-hover rounded-sm transition" style="padding: 16px 24px; font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 18px; line-height: 24px; color: #371b01; box-shadow: 0 4px 24px rgba(0,0,0,0.08), 0 0 4px rgba(0,0,0,0.08), 0 0 16px rgba(0,0,0,0.08);"><span class="cta-txt-desktop">Entender se faz sentido para mim</span><span class="cta-txt-mobile" style="display:none;">Faz sentido para mim?</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DOBRA 11 - SOLUÇÃO ============ -->
+<section id="solucao-cta" class="bg-white relative" style="padding: 104px 107px 96px 107px;">
+  <div class="flex items-center" style="gap: 124px; max-width: 1153px; margin: 0 auto;">
+    <!-- COLUNA ESQUERDA: Texto + bullets + CTA (w-466) -->
+    <div class="reveal flex flex-col flex-shrink-0" style="gap: 10px; width: 466px;">
+      <!-- Kicker -->
+      <div style="padding-bottom: 4px;">
+        <p style="font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 16px; line-height: 24px; color: #2e2e2e;">Como destravar negócios</p>
+      </div>
+
+      <!-- Headline (Kufam 40/48, tracking -0.4px, 3 linhas) -->
+      <h2 style="font-family: 'Kufam', sans-serif; font-size: 40px; line-height: 48px; letter-spacing: -0.4px; color: #371b01; font-weight: 400;">
+        <span style="font-weight: 400;">O tomador parcela.<br/>O&nbsp;emissor recebe a guia<br/></span><span style="font-weight: 700;">liquidada à vista, em tempo real.</span>
+      </h2>
+
+      <!-- Body container (gap-16) -->
+      <div class="flex flex-col" style="gap: 16px;">
+        <!-- Subtitle (inline bold) -->
+        <p style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #2e2e2e;">Solução digital que permite <strong style="font-weight: 700;">parcelar custas processuais, fianças, guias judiciais e honorários</strong> em até 12x no cartão, usando até 3 cartões de crédito. O custo é repassado ao tomador, como no modelo do TJSC, e o emissor recebe <strong style="font-weight: 700;">à vista, com liquidação em tempo real e sem risco</strong>.</p>
+
+        <!-- Bullets (w-310, gap-16) -->
+        <div class="flex flex-col" style="gap: 16px; width: 310px;">
+          <div class="flex items-start" style="gap: 8px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="flex-shrink-0">
+              <path d="M5 12h14M13 6l6 6-6 6" stroke="#ffb800" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #2e2e2e;">Custo repassado ao tomador</span>
+          </div>
+          <div class="flex items-start" style="gap: 8px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="flex-shrink-0">
+              <path d="M5 12h14M13 6l6 6-6 6" stroke="#ffb800" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #2e2e2e;">Até 3 cartões por transação</span>
+          </div>
+          <div class="flex items-start" style="gap: 8px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="flex-shrink-0">
+              <path d="M5 12h14M13 6l6 6-6 6" stroke="#ffb800" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #2e2e2e;">Liquidação em tempo real</span>
+          </div>
+          <div class="flex items-start" style="gap: 8px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="flex-shrink-0">
+              <path d="M5 12h14M13 6l6 6-6 6" stroke="#ffb800" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #2e2e2e;">Sem risco para o emissor</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA WhatsApp -->
+      <!-- WhatsApp Business: +55 31 97332-2921 (definido por Daniel Damázio Naves, nov/2025). Link: wa.me/5531973322921 -->
+      <div style="padding-top: 14px;">
+        <a href="https://wa.me/5531973322921?text=Ol%C3%A1%21%20Vim%20da%20Landing%20Page%20Parcele%20Aqui%20Jur%C3%ADdico%20e%20quero%20fazer%20uma%20simula%C3%A7%C3%A3o%20de%20parcelamento%20para%20o%20meu%20escrit%C3%B3rio." target="_blank" rel="noopener" class="inline-flex items-center justify-center bg-brand-yellow btn-yellow-hover rounded-sm transition" style="width: 369px; white-space: nowrap; padding: 16px 24px; font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 18px; line-height: 24px; color: #371b01; box-shadow: 0 4px 24px rgba(0,0,0,0.08), 0 0 4px rgba(0,0,0,0.08), 0 0 16px rgba(0,0,0,0.08);">Simular uma operação</a>
+      </div>
+    </div>
+
+    <!-- COLUNA DIREITA: PNG transparente com foto + shape amarelo embutidos -->
+    <div class="reveal flex-shrink-0" data-delay="1" style="width: 563px;">
+      <img loading="lazy" decoding="async" src="/images/sections/secao-solucao.webp" width="1174" height="1091" alt="Profissional confiante em ambiente jurídico" class="block img-fade" style="width: 100%; height: auto;" />
+    </div>
+  </div>
+</section>
+
+<!-- ============ DOBRA 12 - COMO FUNCIONA ============ -->
+<section id="como-funciona" class="bg-white relative">
+  <!-- ===== VERSÃO DESKTOP (>=768px) ===== -->
+  <div class="cf-desktop" style="padding: 48px 107px 40px 107px;">
+  <!-- Container relative para posicionamentos absolutos -->
+  <div class="relative" style="width: 1153px; max-width: 100%; margin: 0 auto;">
+
+    <!-- Shape amarelo de fundo (Figma Dev Mode: 1183×464, rounded-32, top y=253 no frame = 191px rel. topo da foto, lateral dir vaza 30px, base vaza 48px abaixo do card) -->
+    <div class="absolute pointer-events-none" style="background: #ffb800; width: 1183px; height: 464px; border-radius: 32px; left: 0; top: 191px; z-index: 0;" aria-hidden="true"></div>
+
+    <!-- Container imagem (webp com foto + vinheta embutida, cantos arredondados do Figma) -->
+    <div class="relative" style="width: 1153px; z-index: 1;">
+      <!-- Foto base (webp RGBA com vinheta já embutida) -->
+      <img loading="lazy" decoding="async" src="/images/sections/secao-como-funciona.webp" width="2306" height="1042" alt="Profissional sorridente em ambiente moderno" class="block img-fade" style="width: 100%; height: auto;" />
+
+      <!-- Texto sobreposto (Figma: bloco top 345 na imagem, pl-32, gap kicker->título 8px, base título→card 24px) -->
+      <div class="absolute" style="top: 345px; left: 0; padding-left: 32px; width: 1153px; display: flex; flex-direction: column; gap: 8px;">
+        <p style="font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 16px; line-height: 24px; color: #f8f6f0;">Como funciona na prática</p>
+        <h2 style="font-family: 'Kufam', sans-serif; font-size: 40px; line-height: 48px; letter-spacing: 0.2px; color: #f8f6f0; font-weight: 400; width: 653px;">
+          <span style="font-weight: 400;">Simples, rápido </span><span style="font-weight: 700;">e 100% digital.</span>
+        </h2>
+      </div>
+
+      <!-- Card 4 passos sobreposto (Figma: top 449 dentro da imagem, recuo lateral 30.5px, w1092 h160) -->
+      <div class="absolute" style="top: 449px; left: 0; width: 1153px; padding: 0 30.5px; z-index: 2;">
+        <div class="flex items-center" style="background: #f8f6f0; border-radius: 16px; width: 1092px; height: 160px;">
+          <!-- Passo 01 -->
+          <div class="flex flex-col justify-center" style="gap: 8px; padding: 32px 16px 32px 32px; width: 263px; height: 100%; border-radius: 16px 0 0 16px;">
+            <p style="font-family: 'Kufam', sans-serif; font-weight: 700; font-size: 24px; line-height: 40px; color: #371b01;">01.</p>
+            <p style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; letter-spacing: -0.32px; color: #111;">O tomador recebe a guia, o boleto ou os honorários</p>
+          </div>
+
+          <!-- Separador 1 -->
+          <div class="flex items-center justify-center" style="width: 4px; height: 100%;">
+            <div style="width: 2px; height: 100px; background: #e6ac00; border-radius: 16px;"></div>
+          </div>
+
+          <!-- Passo 02 -->
+          <div class="flex flex-col justify-center" style="gap: 8px; padding: 32px 16px; width: 271.5px; height: 100%;">
+            <p style="font-family: 'Kufam', sans-serif; font-weight: 700; font-size: 24px; line-height: 40px; color: #371b01;">02.</p>
+            <p style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #111;">Você envia o link do Parcele Aqui <span style="font-size: 13px;">(WhatsApp ou e-mail)</span></p>
+          </div>
+
+          <!-- Separador 2 -->
+          <div class="flex items-center justify-center" style="width: 2px; height: 100%;">
+            <div style="width: 2px; height: 100px; background: #e6ac00; border-radius: 16px;"></div>
+          </div>
+
+          <!-- Passo 03 -->
+          <div class="flex flex-col justify-center" style="gap: 8px; padding: 32px 16px; width: 271.5px; height: 100%;">
+            <p style="font-family: 'Kufam', sans-serif; font-weight: 700; font-size: 24px; line-height: 40px; color: #371b01;">03.</p>
+            <p style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; letter-spacing: -0.32px; color: #111;">O tomador escolhe o número<br/>de parcelas e paga no cartão</p>
+          </div>
+
+          <!-- Separador 3 -->
+          <div class="flex items-center justify-center" style="width: 2px; height: 100%;">
+            <div style="width: 2px; height: 100px; background: #e6ac00; border-radius: 16px;"></div>
+          </div>
+
+          <!-- Passo 04 -->
+          <div class="flex flex-col justify-center" style="gap: 8px; padding: 32px 32px 32px 16px; width: 271.5px; height: 100%; border-radius: 0 16px 16px 0;">
+            <p style="font-family: 'Kufam', sans-serif; font-weight: 700; font-size: 24px; line-height: 40px; color: #371b01;">04.</p>
+            <p style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; letter-spacing: -0.32px; color: #111;">A guia é liquidada na hora, com segurança total</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Espaçador: foto 521 + shape vaza até 655 (134px abaixo da foto) + respiro -->
+    <div style="height: 154px;"></div>
+  </div>
+  </div><!-- /cf-desktop -->
+
+  <!-- ===== VERSÃO MOBILE (<768px) — Figma node 4010:13909 (412px) PIXEL PERFECT ===== -->
+  <div class="cf-mobile" style="display: none; position: relative; padding: 48px 0 56px 0;">
+    <!-- Wrapper conteúdo (largura total disponível: tela - 36px lateral via padding do cf-mobile) -->
+    <div style="position: relative; width: 100%; margin: 0 auto; z-index: 1;">
+
+      <!-- Foto portrait + título sobre a base. Figma: 340x580. Foto e card com 36px lateral; shape amarelo full-bleed atrás. -->
+      <div style="position: relative; width: 100%;">
+
+        <!-- Shape amarelo full-bleed atrás de foto e card. top sobe ~140px atrás da base da foto: 74.2% da altura da foto = (100vw-72px) × 580/340 × 0.742. bottom:0 ancora na base do card. -->
+        <div aria-hidden="true" style="position: absolute; left: -36px; right: -36px; top: calc((100vw - 72px) * 580 / 340 * 0.742); bottom: 0; background: #ffb800; z-index: 0;"></div>
+
+        <!-- Foto como img real -->
+        <div style="position: relative; width: 100%; aspect-ratio: 340 / 580; z-index: 1;">
+          <img loading="lazy" decoding="async" src="/images/sections/secao-como-funciona-mobile.webp" alt="Como funciona na prática" style="position: relative; display: block; width: 100%; height: 100%; object-fit: cover; z-index: 1;" />
+
+          <!-- Texto branco sobreposto na parte de baixo da foto -->
+          <div style="position: absolute; bottom: 76px; left: 0; padding: 0 32px; width: 100%; display: flex; flex-direction: column; gap: 8px; z-index: 2;">
+            <p style="font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 16px; line-height: 24px; color: #f8f6f0; margin: 0;">Como funciona na prática</p>
+            <h2 style="font-family: 'Kufam', sans-serif; font-size: 32px; line-height: 40px; letter-spacing: 0.2px; color: #f8f6f0; font-weight: 400; margin: 0;">
+              <span style="font-weight: 400;">Simples, rápido </span><span style="font-weight: 700;">e 100% digital.</span>
+            </h2>
+          </div>
+        </div>
+
+        <!-- Card creme sobrepondo a base da foto. padding-bottom:56px = faixa amarela inferior estável. -->
+        <div style="position: relative; margin-top: -56px; padding-bottom: 56px; z-index: 2;">
+          <div style="background: #f8f6f0; border-radius: 32px; padding: 56px 32px 32px 32px; display: flex; flex-direction: column;">
+            <!-- Passo 01 -->
+            <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 8px;">
+              <p style="font-family: 'Kufam', sans-serif; font-weight: 700; font-size: 32px; line-height: 40px; color: #371b01; margin: 0;">01.</p>
+              <p style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; letter-spacing: -0.32px; color: #371b01; margin: 0;">O tomador recebe a guia,<br/>o boleto ou os honorários</p>
+            </div>
+            <!-- Separador -->
+            <div style="width: 160px; height: 2px; background: #ffb800; margin: 32px auto;"></div>
+            <!-- Passo 02 -->
+            <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 8px;">
+              <p style="font-family: 'Kufam', sans-serif; font-weight: 700; font-size: 32px; line-height: 40px; color: #371b01; margin: 0;">02.</p>
+              <p style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #371b01; margin: 0;">Você envia o link do Parcele Aqui<br/><span style="font-size: 13px;">(WhatsApp ou e-mail)</span></p>
+            </div>
+            <div style="width: 160px; height: 2px; background: #ffb800; margin: 32px auto;"></div>
+            <!-- Passo 03 -->
+            <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 8px;">
+              <p style="font-family: 'Kufam', sans-serif; font-weight: 700; font-size: 32px; line-height: 40px; color: #371b01; margin: 0;">03.</p>
+              <p style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; letter-spacing: -0.32px; color: #371b01; margin: 0;">O tomador escolhe o número<br/>de parcelas e paga no cartão</p>
+            </div>
+            <div style="width: 160px; height: 2px; background: #ffb800; margin: 32px auto;"></div>
+            <!-- Passo 04 -->
+            <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 8px;">
+              <p style="font-family: 'Kufam', sans-serif; font-weight: 700; font-size: 32px; line-height: 40px; color: #371b01; margin: 0;">04.</p>
+              <p style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; letter-spacing: -0.32px; color: #371b01; margin: 0;">A guia é liquidada na hora,<br/>com segurança total</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!-- /cf-mobile -->
+</section>
+
+<style>
+  /* Responsividade dobra Como Funciona */
+  @media (max-width: 1023px) {
+    #como-funciona .cf-desktop { display: none !important; }
+    #como-funciona .cf-mobile { display: block !important; }
+  }
+</style>
+
+
+<!-- ============ DOBRA NOVA - MERCADOS (onde atuamos) ============ -->
+<section id="mercados" class="bg-white relative" style="padding: 96px 107px 88px 107px;">
+  <div class="relative z-10 flex flex-col" style="gap: 40px; max-width: 1153px; margin: 0 auto;">
+    <div class="flex flex-col w-full">
+      <div class="flex justify-center" style="padding-bottom: 4px;">
+        <p style="font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 16px; line-height: 24px; color: #2e2e2e;">Onde atuamos</p>
+      </div>
+      <div class="flex justify-center">
+        <h2 class="text-center" style="font-family: 'Kufam', sans-serif; font-size: 40px; line-height: 48px; letter-spacing: 0.2px; color: #371b01; max-width: 900px;">
+          <span style="font-weight: 400;">Um motor de parcelamento para </span><span style="font-weight: 700;">todo o ecossistema jurídico</span>
+        </h2>
+      </div>
+      <div class="w-full" style="padding: 16px 120px 0 120px;">
+        <p class="text-center" style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #2e2e2e;">Da custa inicial ao honorário de êxito: o mesmo produto, adaptado a cada elo do setor.</p>
+      </div>
+    </div>
+    <div class="merc-cards flex w-full" style="gap: 24px; flex-wrap: wrap;">
+      <article class="flex flex-col items-start justify-center card-hover reveal" style="background: #f8f6f0; border: 2px solid #ffb800; border-radius: 32px; padding: 28px 18px; flex: 1 0 0; max-width: 420px; min-width: 250px;">
+        <div class="flex flex-col" style="gap: 8px;">
+          <div class="merc-head" style="display:flex; align-items:center; gap:10px; margin-bottom:4px;"><img loading="lazy" decoding="async" src="/images/icons/ic-tribunal.svg" alt="" aria-hidden="true" style="width:38px; height:38px; flex-shrink:0;" /><span style="display:inline-block; font-family:'DM Sans',sans-serif; font-weight:700; font-size:10px; letter-spacing:0.03em; text-transform:uppercase; color:#371b01; background:#ffe9a8; padding:3px 9px; border-radius:999px; width:fit-content; white-space:nowrap;">B2G · Institucional</span></div>
+          <h3 style="font-family: 'Kufam', sans-serif; font-weight: 700; font-size: 20px; line-height: 24px; letter-spacing: 0.2px; color: #371b01;">Tribunais de Justiça</h3>
+          <p style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #371b01;">Custas iniciais, finais e taxas judiciais parceladas no fluxo do tribunal, como já acontece no TJSC.</p>
+        </div>
+      </article>
+      <article class="flex flex-col items-start justify-center card-hover reveal" style="background: #f8f6f0; border: 2px solid #ffb800; border-radius: 32px; padding: 28px 18px; flex: 1 0 0; max-width: 420px; min-width: 250px;">
+        <div class="flex flex-col" style="gap: 8px;">
+          <div class="merc-head" style="display:flex; align-items:center; gap:10px; margin-bottom:4px;"><img loading="lazy" decoding="async" src="/images/icons/ic-oab.svg" alt="" aria-hidden="true" style="width:38px; height:38px; flex-shrink:0;" /><span style="display:inline-block; font-family:'DM Sans',sans-serif; font-weight:700; font-size:10px; letter-spacing:0.03em; text-transform:uppercase; color:#371b01; background:#ffe9a8; padding:3px 9px; border-radius:999px; width:fit-content; white-space:nowrap;">B2G · Associativo</span></div>
+          <h3 style="font-family: 'Kufam', sans-serif; font-weight: 700; font-size: 20px; line-height: 24px; letter-spacing: 0.2px; color: #371b01;">OAB, seccionais e subseções</h3>
+          <p style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #371b01;">Anuidades, contribuições e inscrições parceladas, mantendo o advogado adimplente.</p>
+        </div>
+      </article>
+      <article class="flex flex-col items-start justify-center card-hover reveal" style="background: #f8f6f0; border: 2px solid #ffb800; border-radius: 32px; padding: 28px 18px; flex: 1 0 0; max-width: 420px; min-width: 250px;">
+        <div class="flex flex-col" style="gap: 8px;">
+          <div class="merc-head" style="display:flex; align-items:center; gap:10px; margin-bottom:4px;"><img loading="lazy" decoding="async" src="/images/icons/ic-escritorio.svg" alt="" aria-hidden="true" style="width:38px; height:38px; flex-shrink:0;" /><span style="display:inline-block; font-family:'DM Sans',sans-serif; font-weight:700; font-size:10px; letter-spacing:0.03em; text-transform:uppercase; color:#371b01; background:#ffe9a8; padding:3px 9px; border-radius:999px; width:fit-content; white-space:nowrap;">B2B · Profissional</span></div>
+          <h3 style="font-family: 'Kufam', sans-serif; font-weight: 700; font-size: 20px; line-height: 24px; letter-spacing: 0.2px; color: #371b01;">Escritórios de advocacia</h3>
+          <p style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #371b01;">Parcele custas, despesas e honorários dos clientes sem assumir risco ou financiamento.</p>
+        </div>
+      </article>
+      <article class="flex flex-col items-start justify-center card-hover reveal" style="background: #f8f6f0; border: 2px solid #ffb800; border-radius: 32px; padding: 28px 18px; flex: 1 0 0; max-width: 420px; min-width: 250px;">
+        <div class="flex flex-col" style="gap: 8px;">
+          <div class="merc-head" style="display:flex; align-items:center; gap:10px; margin-bottom:4px;"><img loading="lazy" decoding="async" src="/images/icons/ic-cartorio.svg" alt="" aria-hidden="true" style="width:38px; height:38px; flex-shrink:0;" /><span style="display:inline-block; font-family:'DM Sans',sans-serif; font-weight:700; font-size:10px; letter-spacing:0.03em; text-transform:uppercase; color:#371b01; background:#ffe9a8; padding:3px 9px; border-radius:999px; width:fit-content; white-space:nowrap;">Extrajudicial</span></div>
+          <h3 style="font-family: 'Kufam', sans-serif; font-weight: 700; font-size: 20px; line-height: 24px; letter-spacing: 0.2px; color: #371b01;">Cartórios e serviços</h3>
+          <p style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #371b01;">Emolumentos de registro, notas, certidões e reconhecimentos com a mesma lógica de parcelamento.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+<style>
+  @media (max-width: 1023px) {
+    #mercados { padding: 48px 36px !important; }
+    #mercados .merc-cards > article { width: 100% !important; max-width: 100% !important; }
+    #mercados h2 { font-size: 32px !important; line-height: 38px !important; }
+    #mercados div[style*="padding: 16px 120px"] { padding: 16px 0 0 0 !important; }
+  }
+</style>
+
+<!-- ============ DOBRA 2 - IMPACTO B2B ============ -->
+<section class="bg-white relative" style="padding: 64px 107px 88px 107px;">
+  <div class="flex flex-col w-full" style="gap: 40px; max-width: 1153px; margin: 0 auto;">
+
+    <!-- HEADER (Context + Kicker v2) -->
+    <div class="flex flex-col items-start w-full">
+      <!-- Kicker -->
+      <div class="flex justify-center w-full" style="padding-bottom: 4px;">
+        <p style="font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 16px; line-height: 24px; color: #2e2e2e;">O que dá para parcelar</p>
+      </div>
+
+      <!-- Headline (Kufam 40/48, letter 0.2px, split regular/bold) -->
+      <div class="flex justify-center w-full">
+        <h2 class="text-center" style="font-family: 'Kufam', sans-serif; font-size: 40px; line-height: 48px; letter-spacing: 0.2px; color: #371b01; max-width: 1152px;">
+          <span style="font-weight: 400; display: block;">Toda guia obrigatória</span>
+          <span style="font-weight: 700; display: block;">do setor jurídico</span>
+        </h2>
+      </div>
+
+      <!-- Subtitle (px-196 pt-16, parte 1 regular + parte 2 bold) -->
+      <div class="w-full" style="padding: 16px 196px 0 196px;">
+        <p class="text-center" style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #2e2e2e;">
+          Flexibilidade para o tomador. <span style="font-weight: 700;">Adimplência para o emissor.</span>
+        </p>
+      </div>
+    </div>
+
+    <!-- GRID DE 6 CARDS (2 linhas × 3 colunas, gap-24, items-end) — DESKTOP -->
+                    <div class="impacto-desktop guia-list" style="display:grid; grid-template-columns:1fr 1fr; gap:0 56px; width:100%;">
+      <div class="guia-col">
+        <div class="guia-item" style="display:flex; gap:18px; align-items:flex-start; padding:26px 0; border-bottom:1px solid #ece7db;">
+          <img src="/images/icons/ic-custas.svg" alt="" aria-hidden="true" style="flex-shrink:0; width:38px; height:38px; margin-top:2px;" />
+          <div>
+            <h3 style="font-family:'Kufam',sans-serif; font-weight:700; font-size:20px; line-height:24px; letter-spacing:0.2px; color:#371b01; margin:0 0 4px 0;">Custas iniciais e finais</h3>
+            <p style="font-family:'DM Sans',sans-serif; font-weight:400; font-size:16px; line-height:24px; color:#2e2e2e; margin:0;">Da distribuição ao trânsito em julgado, em até 12x.</p>
+          </div>
+        </div>
+        <div class="guia-item" style="display:flex; gap:18px; align-items:flex-start; padding:26px 0; border-bottom:1px solid #ece7db;">
+          <img src="/images/icons/ic-taxas.svg" alt="" aria-hidden="true" style="flex-shrink:0; width:38px; height:38px; margin-top:2px;" />
+          <div>
+            <h3 style="font-family:'Kufam',sans-serif; font-weight:700; font-size:20px; line-height:24px; letter-spacing:0.2px; color:#371b01; margin:0 0 4px 0;">Taxas e despesas processuais</h3>
+            <p style="font-family:'DM Sans',sans-serif; font-weight:400; font-size:16px; line-height:24px; color:#2e2e2e; margin:0;">TSJ, diligências, precatórias, certidões e desarquivamento.</p>
+          </div>
+        </div>
+        <div class="guia-item" style="display:flex; gap:18px; align-items:flex-start; padding:26px 0; border-bottom:1px solid #ece7db;">
+          <img src="/images/icons/ic-anuidade.svg" alt="" aria-hidden="true" style="flex-shrink:0; width:38px; height:38px; margin-top:2px;" />
+          <div>
+            <h3 style="font-family:'Kufam',sans-serif; font-weight:700; font-size:20px; line-height:24px; letter-spacing:0.2px; color:#371b01; margin:0 0 4px 0;">Anuidade e contribuições da OAB</h3>
+            <p style="font-family:'DM Sans',sans-serif; font-weight:400; font-size:16px; line-height:24px; color:#2e2e2e; margin:0;">Recorrência anual previsível, sem comprometer o caixa.</p>
+          </div>
+        </div>
+      </div>
+      <div class="guia-col">
+        <div class="guia-item" style="display:flex; gap:18px; align-items:flex-start; padding:26px 0; border-bottom:1px solid #ece7db;">
+          <img src="/images/icons/ic-honorarios.svg" alt="" aria-hidden="true" style="flex-shrink:0; width:38px; height:38px; margin-top:2px;" />
+          <div>
+            <h3 style="font-family:'Kufam',sans-serif; font-weight:700; font-size:20px; line-height:24px; letter-spacing:0.2px; color:#371b01; margin:0 0 4px 0;">Honorários de escritório</h3>
+            <p style="font-family:'DM Sans',sans-serif; font-weight:400; font-size:16px; line-height:24px; color:#2e2e2e; margin:0;">Contratuais e de êxito, sem financiar o cliente.</p>
+          </div>
+        </div>
+        <div class="guia-item" style="display:flex; gap:18px; align-items:flex-start; padding:26px 0; border-bottom:1px solid #ece7db;">
+          <img src="/images/icons/ic-emolumentos.svg" alt="" aria-hidden="true" style="flex-shrink:0; width:38px; height:38px; margin-top:2px;" />
+          <div>
+            <h3 style="font-family:'Kufam',sans-serif; font-weight:700; font-size:20px; line-height:24px; letter-spacing:0.2px; color:#371b01; margin:0 0 4px 0;">Emolumentos de cartório</h3>
+            <p style="font-family:'DM Sans',sans-serif; font-weight:400; font-size:16px; line-height:24px; color:#2e2e2e; margin:0;">Registro, notas, certidões e usucapião extrajudicial.</p>
+          </div>
+        </div>
+        <div class="guia-item" style="display:flex; gap:18px; align-items:flex-start; padding:26px 0; border-bottom:1px solid #ece7db;">
+          <img src="/images/icons/ic-fianca.svg" alt="" aria-hidden="true" style="flex-shrink:0; width:38px; height:38px; margin-top:2px;" />
+          <div>
+            <h3 style="font-family:'Kufam',sans-serif; font-weight:700; font-size:20px; line-height:24px; letter-spacing:0.2px; color:#371b01; margin:0 0 4px 0;">Fianças e cauções</h3>
+            <p style="font-family:'DM Sans',sans-serif; font-weight:400; font-size:16px; line-height:24px; color:#2e2e2e; margin:0;">Fianças e cauções judiciais sem pesar no caixa.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== CARROSSEL MOBILE (<768px) — 1 card por vez + espiada, setas + bolinhas ===== -->
+    <div class="impacto-mobile" style="display: none; width: 100%;">
+      <!-- Trilho com scroll-snap -->
+      <div class="imp-track" style="display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: none; padding-bottom: 4px;">
+        <!-- Card 01 -->
+        <article class="imp-card card-hover" style="scroll-snap-align: center; flex: 0 0 85%; background: #f8f6f0; border: 1px solid #ffb800; border-radius: 24px; padding: 28px; display: flex; flex-direction: column; gap: 8px;">
+          <img loading="lazy" decoding="async" src="/images/icons/ic-custas.svg" alt="" aria-hidden="true" style="width: 44px; height: 44px;" />
+          <h3 style="font-family: 'Kufam', sans-serif; font-weight: 700; font-size: 20px; line-height: 24px; letter-spacing: 0.5px; color: #371b01; margin: 8px 0 0 0;">Custas iniciais e finais</h3>
+          <p style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #2e2e2e; margin: 0;">Da distribuição ao trânsito em julgado, em até 12x.</p>
+        </article>
+        <!-- Card 02 -->
+        <article class="imp-card card-hover" style="scroll-snap-align: center; flex: 0 0 85%; background: #f8f6f0; border: 1px solid #ffb800; border-radius: 24px; padding: 28px; display: flex; flex-direction: column; gap: 8px;">
+          <img loading="lazy" decoding="async" src="/images/icons/ic-taxas.svg" alt="" aria-hidden="true" style="width: 44px; height: 44px;" />
+          <h3 style="font-family: 'Kufam', sans-serif; font-weight: 700; font-size: 20px; line-height: 24px; letter-spacing: 0.5px; color: #371b01; margin: 8px 0 0 0;">Taxas e despesas processuais</h3>
+          <p style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #2e2e2e; margin: 0;">TSJ, diligências, precatórias, certidões e desarquivamento.</p>
+        </article>
+        <!-- Card 03 -->
+        <article class="imp-card card-hover" style="scroll-snap-align: center; flex: 0 0 85%; background: #f8f6f0; border: 1px solid #ffb800; border-radius: 24px; padding: 28px; display: flex; flex-direction: column; gap: 8px;">
+          <img loading="lazy" decoding="async" src="/images/icons/ic-fianca.svg" alt="" aria-hidden="true" style="width: 44px; height: 44px;" />
+          <h3 style="font-family: 'Kufam', sans-serif; font-weight: 700; font-size: 20px; line-height: 24px; letter-spacing: 0.5px; color: #371b01; margin: 8px 0 0 0;">Fianças e cauções</h3>
+          <p style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #2e2e2e; margin: 0;">Fianças, cauções e depósitos judiciais parcelados, sem comprometer o caixa.</p>
+        </article>
+        <!-- Card 04 -->
+        <article class="imp-card card-hover" style="scroll-snap-align: center; flex: 0 0 85%; background: #f8f6f0; border: 1px solid #ffb800; border-radius: 24px; padding: 28px; display: flex; flex-direction: column; gap: 8px;">
+          <img loading="lazy" decoding="async" src="/images/icons/ic-anuidade.svg" alt="" aria-hidden="true" style="width: 44px; height: 44px;" />
+          <h3 style="font-family: 'Kufam', sans-serif; font-weight: 700; font-size: 20px; line-height: 24px; letter-spacing: 0.5px; color: #371b01; margin: 8px 0 0 0;">Anuidade e contribuições da OAB</h3>
+          <p style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #2e2e2e; margin: 0;">Recorrência anual previsível, sem comprometer o caixa.</p>
+        </article>
+        <!-- Card 05 -->
+        <article class="imp-card card-hover" style="scroll-snap-align: center; flex: 0 0 85%; background: #f8f6f0; border: 1px solid #ffb800; border-radius: 24px; padding: 28px; display: flex; flex-direction: column; gap: 8px;">
+          <img loading="lazy" decoding="async" src="/images/icons/ic-honorarios.svg" alt="" aria-hidden="true" style="width: 44px; height: 44px;" />
+          <h3 style="font-family: 'Kufam', sans-serif; font-weight: 700; font-size: 20px; line-height: 24px; letter-spacing: 0.5px; color: #371b01; margin: 8px 0 0 0;">Honorários de escritório</h3>
+          <p style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #2e2e2e; margin: 0;">Contratuais e de êxito, sem financiar o cliente.</p>
+        </article>
+        <!-- Card 06 -->
+        <article class="imp-card card-hover" style="scroll-snap-align: center; flex: 0 0 85%; background: #f8f6f0; border: 1px solid #ffb800; border-radius: 24px; padding: 28px; display: flex; flex-direction: column; gap: 8px;">
+          <img loading="lazy" decoding="async" src="/images/icons/ic-emolumentos.svg" alt="" aria-hidden="true" style="width: 44px; height: 44px;" />
+          <h3 style="font-family: 'Kufam', sans-serif; font-weight: 700; font-size: 20px; line-height: 24px; letter-spacing: 0.5px; color: #371b01; margin: 8px 0 0 0;">Emolumentos de cartório</h3>
+          <p style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #2e2e2e; margin: 0; text-wrap: balance;">Registro, notas, certidões e usucapião extrajudicial.</p>
+        </article>
+      </div>
+
+      <!-- Controles: bolinhas à esquerda, setas juntas à direita -->
+      <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 24px;">
+        <div class="imp-dots" style="display: flex; gap: 8px; align-items: center;">
+          <span data-i="0" style="width: 8px; height: 8px; border-radius: 999px; background: #ffb800; transition: all 0.2s;"></span>
+          <span data-i="1" style="width: 8px; height: 8px; border-radius: 999px; background: #e0ddd4; transition: all 0.2s;"></span>
+          <span data-i="2" style="width: 8px; height: 8px; border-radius: 999px; background: #e0ddd4; transition: all 0.2s;"></span>
+          <span data-i="3" style="width: 8px; height: 8px; border-radius: 999px; background: #e0ddd4; transition: all 0.2s;"></span>
+          <span data-i="4" style="width: 8px; height: 8px; border-radius: 999px; background: #e0ddd4; transition: all 0.2s;"></span>
+          <span data-i="5" style="width: 8px; height: 8px; border-radius: 999px; background: #e0ddd4; transition: all 0.2s;"></span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 12px; flex-shrink: 0;">
+          <button type="button" class="imp-prev" aria-label="Anterior" style="width: 44px; height: 44px; border-radius: 999px; border: 1px solid #ffb800; background: #ffb800; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="#371b01" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <button type="button" class="imp-next" aria-label="Próximo" style="width: 44px; height: 44px; border-radius: 999px; border: 1px solid #ffb800; background: #fff; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="#371b01" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="flex items-center justify-center w-full" style="gap: 24px;">
+      <a href="https://wa.me/5531973322921?text=Ol%C3%A1%21%20Vim%20da%20Landing%20Page%20Parcele%20Aqui%20Jur%C3%ADdico%20e%20gostaria%20de%20ver%20exemplos%20de%20uso%20do%20Parcele%20Aqui." target="_blank" rel="noopener" class="inline-flex items-center justify-center bg-brand-yellow btn-yellow-hover rounded-sm transition" style="width: 369px; white-space: nowrap; padding: 16px 24px; font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 18px; line-height: 24px; color: #371b01; box-shadow: 0 4px 24px rgba(0,0,0,0.08), 0 0 4px rgba(0,0,0,0.08), 0 0 16px rgba(0,0,0,0.08);">Quero aplicar no meu segmento</a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============ DOBRA NOVA - AUTORIDADE (benchmark publico) ============ -->
+<section id="autoridade" class="relative" style="background:#f8f6f0; padding: 104px 107px 104px 107px;">
+  <div class="auth-wrap relative z-10 flex" style="gap: 72px; align-items: flex-start; max-width: 1153px; margin: 0 auto;">
+    <div class="auth-col-img flex-shrink-0" style="flex:0 0 430px; max-width:430px;">
+      <img loading="lazy" decoding="async" src="/images/sections/autoridade-juridico.webp" width="1174" height="1091" alt="Advogada utilizando o pagamento digital de custas" class="block img-fade" style="width:100%; height:auto;" />
+    </div>
+    <div class="auth-col-text flex flex-col" style="flex:1 1 0; min-width:0; gap: 28px;">
+      <div class="flex flex-col" style="gap: 12px;">
+        <p style="font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 16px; line-height: 24px; color:#2e2e2e; margin:0;">Modelo validado pelo Judiciário</p>
+        <h2 style="font-family: 'Kufam', sans-serif; font-size: 40px; line-height: 48px; letter-spacing: 0.2px; color:#371b01; margin:0;">
+          <span style="font-weight: 400;">O parcelamento de custas<br></span><span style="font-weight: 700;">já é realidade nos tribunais</span>
+        </h2>
+        <p style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color:#2e2e2e; margin:4px 0 0 0;">Desde 2020, o TJSC já permite pagar custas em até 12x no cartão; em 2025, o STJ passou a aceitar cartão e Pix. É o mesmo meio que o Parcele Aqui domina e que o Judiciário usa para reduzir a inadimplência da arrecadação.</p>
+      </div>
+      <div class="auth-stats" style="display:grid; grid-template-columns:1fr 1fr; gap:20px; grid-auto-rows:1fr;">
+        <div style="background:#ffffff; border:1px solid #e7e1d5; border-radius:20px; overflow:hidden;">
+          <div style="height:3px; background:#ffb800;"></div>
+          <div style="padding:24px 22px;">
+            <img src="/images/icons/ic-stat-12x.svg" alt="" aria-hidden="true" style="width:26px; height:26px; margin-bottom:14px;" />
+            <p style="font-family:'Kufam',sans-serif; font-weight:900; font-size:30px; line-height:1; color:#ffb800; margin:0 0 10px 0;">12x</p>
+            <p style="font-family:'DM Sans',sans-serif; font-weight:400; font-size:15px; line-height:22px; color:#2e2e2e; margin:0;">no cartão de crédito<br>para custas (TJSC)</p>
+          </div>
+        </div>
+        <div style="background:#ffffff; border:1px solid #e7e1d5; border-radius:20px; overflow:hidden;">
+          <div style="height:3px; background:#ffb800;"></div>
+          <div style="padding:24px 22px;">
+            <img src="/images/icons/ic-stat-2020.svg" alt="" aria-hidden="true" style="width:26px; height:26px; margin-bottom:14px;" />
+            <p style="font-family:'Kufam',sans-serif; font-weight:900; font-size:30px; line-height:1; color:#ffb800; margin:0 0 10px 0;">2020</p>
+            <p style="font-family:'DM Sans',sans-serif; font-weight:400; font-size:15px; line-height:22px; color:#2e2e2e; margin:0;">TJSC pioneiro no pagamento<br>digital de custas</p>
+          </div>
+        </div>
+        <div style="background:#ffffff; border:1px solid #e7e1d5; border-radius:20px; overflow:hidden;">
+          <div style="height:3px; background:#ffb800;"></div>
+          <div style="padding:24px 22px;">
+            <img src="/images/icons/ic-stat-res.svg" alt="" aria-hidden="true" style="width:26px; height:26px; margin-bottom:14px;" />
+            <p style="font-family:'Kufam',sans-serif; font-weight:900; font-size:30px; line-height:1; color:#ffb800; margin:0 0 10px 0;">Res. 7/2025</p>
+            <p style="font-family:'DM Sans',sans-serif; font-weight:400; font-size:15px; line-height:22px; color:#2e2e2e; margin:0;">STJ passa a aceitar<br>cartão e Pix</p>
+          </div>
+        </div>
+        <div style="background:#ffffff; border:1px solid #e7e1d5; border-radius:20px; overflow:hidden;">
+          <div style="height:3px; background:#ffb800;"></div>
+          <div style="padding:24px 22px;">
+            <img src="/images/icons/ic-stat-5x.svg" alt="" aria-hidden="true" style="width:26px; height:26px; margin-bottom:14px;" />
+            <p style="font-family:'Kufam',sans-serif; font-weight:900; font-size:30px; line-height:1; color:#ffb800; margin:0 0 10px 0;">até 5x</p>
+            <p style="font-family:'DM Sans',sans-serif; font-weight:400; font-size:15px; line-height:22px; color:#2e2e2e; margin:0;">em boleto para custas<br>finais (TJSC)</p>
+          </div>
+        </div>
+      </div>
+      <p style="font-family:'DM Sans',sans-serif; font-size:13px; line-height:20px; color:#6f6f6f; margin:0;">Fontes públicas: portais do TJSC e do STJ (Res. STJ/GP 7/2025).<br>Dados internos de mercado não são divulgados.</p>
+    </div>
+  </div>
+</section>
+<style>
+  @media (max-width: 1023px) {
+    #autoridade { padding: 64px 36px !important; }
+    #autoridade .auth-wrap { flex-direction: column !important; gap: 32px !important; align-items: stretch !important; }
+    #autoridade .auth-col-img { flex: none !important; width: 100% !important; max-width: 100% !important; }
+    #autoridade h2 { font-size: 30px !important; line-height: 38px !important; }
+  }
+  @media (max-width: 520px) { #autoridade .auth-stats { grid-template-columns: 1fr !important; } }
+</style>
+
+<!-- ============ DOBRA 7 - EMPRESAS QUE UTILIZAM ============ -->
+<section id="empresas" class="bg-white relative" style="padding: 64px 107px 140px 107px; overflow-x: clip;">
+  <div class="relative z-10 flex flex-col" style="gap: 72px; max-width: 1153px; margin: 0 auto;">
+    <div class="reveal flex flex-col items-center w-full">
+      <!-- Kicker -->
+      <p class="text-brand-text-secondary text-center" style="font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 16px; line-height: 24px; padding-bottom: 4px;">Quem já confia</p>
+
+      <!-- Headline (Kufam 40/48, 2 linhas, regular + bold) -->
+      <h2 class="text-center" style="font-family: 'Kufam', sans-serif; font-size: 40px; line-height: 48px; letter-spacing: 0.2px; color: #371b01; max-width: 1152px;">
+        <span style="font-weight: 400; display: block;">Instituições e parceiros</span>
+        <span style="font-weight: 700; display: block;">que já operam com a Potencial</span>
+      </h2>
+
+      <!-- Subtitle (Figma: px-196 py-16) -->
+      <div class="w-full" style="padding: 16px 96px;">
+        <p class="text-center" style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #2e2e2e; text-wrap: balance; max-width: 880px; margin: 0 auto;">Empresas e órgãos que utilizam o Parcele Aqui para destravar o pagamento de guias e honorários, com operações processadas por meio da adquirência <strong style="font-weight: 700;">Cielo</strong>, garantindo segurança, confiabilidade e liquidação à vista para o emissor.</p>
+      </div>
+
+      <!-- Grid 4×4 de logos (células uniformes, centralizado) -->
+      <div class="w-full" style="padding: 24px 96px;">
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); row-gap: 48px; column-gap: 32px; align-items: center; justify-items: center;">
+          <!-- Fileira 1 -->
+          <img loading="lazy" decoding="async" src="/images/logos/Bradesco default.svg" alt="Bradesco" class="object-contain" style="max-height: 88px; max-width: 240px;" />
+          <img loading="lazy" decoding="async" src="/images/logos/Component 2.svg" alt="Banco do Brasil" class="object-contain" style="max-height: 88px; max-width: 240px;" />
+          <img loading="lazy" decoding="async" src="/images/logos/Component 3.svg" alt="Itaú" class="object-contain" style="max-height: 72px; max-width: 200px;" />
+          <img loading="lazy" decoding="async" src="/images/logos/Component 4.svg" alt="Western Union" class="object-contain" style="max-height: 72px; max-width: 200px;" />
+          <!-- Fileira 2 -->
+          <img loading="lazy" decoding="async" src="/images/logos/Component 7.jpg" alt="Contabilidade Diplomata" class="object-contain" style="max-height: 72px; max-width: 200px;" />
+          <img loading="lazy" decoding="async" src="/images/logos/Component 9.jpg" alt="Assescont" class="object-contain" style="max-height: 72px; max-width: 200px;" />
+          <img loading="lazy" decoding="async" src="/images/logos/Component 5.jpg" alt="SR Eis Contabilidade" class="object-contain" style="max-height: 72px; max-width: 200px;" />
+          <img loading="lazy" decoding="async" src="/images/logos/Component 6.jpg" alt="Capitale" class="object-contain" style="max-height: 72px; max-width: 200px;" />
+          <!-- Fileira 3 -->
+          <img loading="lazy" decoding="async" src="/images/logos/Component 14.svg" alt="Detran-MS" class="object-contain" style="max-height: 72px; max-width: 200px;" />
+          <img loading="lazy" decoding="async" src="/images/logos/Component 15.svg" alt="Detran-PR" class="object-contain" style="max-height: 72px; max-width: 200px;" />
+          <img loading="lazy" decoding="async" src="/images/logos/Component 16.svg" alt="Poupatempo" class="object-contain" style="max-height: 72px; max-width: 200px;" />
+          <img loading="lazy" decoding="async" src="/images/logos/Component 17.svg" alt="UAI" class="object-contain" style="max-height: 72px; max-width: 200px;" />
+          <!-- Fileira 4 -->
+          <img loading="lazy" decoding="async" src="/images/logos/Component 8.svg" alt="Protege" class="object-contain" style="max-height: 72px; max-width: 200px;" />
+          <img loading="lazy" decoding="async" src="/images/logos/Component 10.svg" alt="BRINKS" class="object-contain" style="max-height: 72px; max-width: 200px;" />
+          <img loading="lazy" decoding="async" src="/images/logos/Component 11.svg" alt="Prosegur" class="object-contain" style="max-height: 72px; max-width: 200px;" />
+          <img loading="lazy" decoding="async" src="/images/logos/Component 12.svg" alt="Prodesp" class="object-contain" style="max-height: 72px; max-width: 200px;" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DOBRA 4 - MODELOS ============ -->
+<section id="modelos" class="bg-brand-beige-light relative" style="padding-top: 96px; padding-bottom: 72px; overflow-x: clip;">
+  <div class="container-fig relative">
+    <!-- MOBILE (<lg): iMac no topo, centralizado com margem 36px de cada lado -->
+    <img loading="lazy" decoding="async" src="/images/sections/secao-como-operar_2.webp" alt="Mockup do produto Parcele Aqui em tela de iMac" class="modelos-img-mobile lg:hidden" style="display: none; width: 100%; max-width: 100%; height: auto; margin: 0 auto 32px auto; object-fit: contain;">
+    <!-- DESKTOP: iMac no canto superior direito, sangrando borda direita (absolute) -->
+    <img loading="lazy" decoding="async" src="/images/sections/imac-completo.webp" alt="Mockup do produto Parcele Aqui em tela de iMac" class="modelos-imac-desktop hidden lg:block img-fade is-loaded">
+
+    <!-- COLUNA ESQUERDA: Texto + cards (copy v59) -->
+    <div class="modelos-texto relative z-10 lg:pl-24" style="max-width: 800px;">
+      <!-- Kicker -->
+      <p class="text-base font-medium text-brand-text-secondary leading-6">Escolha estratégica</p>
+
+      <!-- Headline (40px / 48px, max-width 563px) -->
+      <h2 class="heading mt-1" style="font-size: 40px; line-height: 48px; letter-spacing: 0.2px; max-width: 563px;">Você escolhe como operar:<br><strong class="font-bold">com a sua marca ou com a marca Parcele Aqui</strong></h2>
+
+      <!-- Subtitle (16/24, 563px) -->
+      <p class="content mt-4 text-brand-text-secondary" style="font-size: 16px; line-height: 24px; max-width: 563px;">A tecnologia, a segurança e a performance<br><strong class="font-bold">permanecem exatamente as mesmas</strong>.</p>
+
+      <!-- 2 modelos lado a lado (369px cada, gap 24px) -->
+      <div class="mt-8 flex flex-col sm:flex-row gap-6">
+        <!-- Modelo 1: Whitelabel (369px) -->
+        <div class="flex-shrink-0" style="width: 369px; max-width: 100%;">
+          <img loading="lazy" decoding="async" src="/images/icons/ic-suamarca.svg" alt="" aria-hidden="true" style="width: 48px; height: 48px;">
+          <h3 class="heading mt-2" style="font-size: 20px; line-height: 24px; letter-spacing: 0.5px;">
+            <span class="font-bold">Com a sua marca</span><br>
+            <span class="font-bold" style="font-size: 12px;">(Whitelabel)</span>
+          </h3>
+          <ul class="mt-4 space-y-4">
+            <li class="flex gap-2 items-start text-brand-text-secondary" style="font-size: 16px; line-height: 24px;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffb800" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+              <span>Serviço exclusivo para o tomador</span>
+            </li>
+            <li class="flex gap-2 items-start text-brand-text-secondary" style="font-size: 16px; line-height: 24px;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffb800" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+              <span>Fortalece a identidade do parceiro</span>
+            </li>
+            <li class="flex gap-2 items-start text-brand-text-secondary" style="font-size: 16px; line-height: 24px;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffb800" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+              <span>Sem expor o intermediário</span>
+            </li>
+          </ul>
+        </div>
+        <!-- Modelo 2: Marca Parcele Aqui (366px) -->
+        <div class="flex-shrink-0" style="width: 366px; max-width: 100%;">
+          <img loading="lazy" decoding="async" src="/images/icons/ic-marcapa.svg" alt="" aria-hidden="true" style="width: 48px; height: 48px;">
+          <h3 class="heading mt-2 font-bold" style="font-size: 20px; line-height: 24px; letter-spacing: 0.5px;">Com a marca<br>Parcele Aqui</h3>
+          <ul class="mt-4 space-y-4">
+            <li class="flex gap-2 items-start text-brand-text-secondary" style="font-size: 16px; line-height: 24px;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffb800" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+              <span>Marca consolidada e reconhecida</span>
+            </li>
+            <li class="flex gap-2 items-start text-brand-text-secondary" style="font-size: 16px; line-height: 24px;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffb800" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+              <span>Tecnologia em constante evolução</span>
+            </li>
+            <li class="flex gap-2 items-start text-brand-text-secondary" style="font-size: 16px; line-height: 24px;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffb800" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+              <span>Pronto para usar, sem customização</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Slogan -->
+      <p class="content mt-6 text-brand-text-secondary" style="font-size: 16px; line-height: 24px;">Você escolhe. <strong class="font-bold">A segurança e a performance são as mesmas.</strong></p>
+
+      <!-- CTA -->
+      <a href="https://wa.me/5531973322921?text=Ol%C3%A1%21%20Vim%20da%20Landing%20Page%20Parcele%20Aqui%20Jur%C3%ADdico%20e%20quero%20entender%20qual%20modelo%20%28whitelabel%20ou%20marca%20Parcele%20Aqui%29%20faz%20mais%20sentido%20para%20mim." target="_blank" rel="noopener" class="mt-10 inline-flex items-center justify-center bg-brand-yellow text-brand-text-primary btn-yellow-hover rounded-sm transition" style="padding: 16px 24px; font-size: 18px; line-height: 24px; letter-spacing: 0.75px; font-weight: 700; box-shadow: 0 4px 24px rgba(0,0,0,0.08), 0 0 4px rgba(0,0,0,0.08), 0 0 16px rgba(0,0,0,0.08);">Entender qual modelo escolher</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DOBRA 16 - QUEM ESTÁ POR TRÁS ============ -->
+<section id="quem-somos" class="bg-white relative overflow-hidden" style="padding: 90px 107px 24px 107px;">
+  <!-- Shape verde decorativo (SVG oficial Figma 672×572). Ancorado à borda DIREITA da tela
+       (sangra até o canto da página); o que passar é cortado pelo overflow-hidden da section.
+       Fora do container centralizado pra poder colar na borda. Oculto no mobile (lá é carrossel). -->
+  
+  <div class="relative" style="max-width: 1153px; margin: 0 auto;">
+    <!-- Container principal: texto à esquerda + cards à direita (vertically centered, gap 124px) --><div style="background: #009F44; border-radius: 240px 32px 32px 32px; width: 680px; height: 607px; top: 10px; right: -104px; z-index: 0;" class="quem-shape hidden lg:block absolute pointer-events-none" aria-hidden="true"></div>
+    
+    <div class="relative flex items-center" style="gap: 124px; padding: 96px 0; z-index: 1;">
+      <!-- COLUNA ESQUERDA: Logo + headline + body -->
+      <div class="flex flex-col flex-shrink-0" style="gap: 10px;">
+        <!-- Logo Potencial Tecnologia + Headline (gap 16px) -->
+        <div class="flex flex-col" style="gap: 16px;">
+          <!-- Logo container (px-6 py-3, image 264×74) -->
+          <div class="flex" style="padding: 3px 6px;">
+            <img loading="lazy" decoding="async" src="/images/logos/logo-potencial-tecnologia.svg" alt="Potencial Tecnologia" style="width: 264px; height: 74px; object-fit: contain;">
+          </div>
+          <!-- Headline (Kufam 40/48, tracking 0.2px, cor #111 preto, w-369) -->
+          <h2 style="font-family: 'Kufam', sans-serif; font-size: 40px; line-height: 48px; letter-spacing: 0.2px; color: #371b01; width: 369px;" data-orig-html="
+            &lt;span style=&quot;font-weight: 400;&quot;&gt;Quem está&lt;br&gt;por trás do&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-weight: 700;&quot;&gt;Parcele Aqui&lt;/span&gt;
+          ">
+            <span style="font-weight: 400;">Quem está<br>por trás do<br></span><span style="font-weight: 700;">Parcele Aqui</span>
+          </h2>
+        </div>
+        <!-- Body (pt-16, gap-16 entre parágrafos, w-367, cor #2e2e2e) -->
+        <div class="flex flex-col" style="gap: 16px; padding-top: 16px; padding-bottom: 24px;  width: 367px;">
+          <p style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #2e2e2e;" data-orig-html="
+            O Parcele Aqui é desenvolvido pela &lt;span style=&quot;font-weight: 700;&quot;&gt;Potencial Tecnologia&lt;/span&gt;, empresa brasileira com mais&lt;br&gt;de &lt;span style=&quot;font-weight: 700;&quot;&gt;25 anos de experiência&lt;/span&gt; em meios&lt;br&gt;de pagamento, automação e gestão financeira.
+          ">
+            O Parcele Aqui é desenvolvido pela <span style="font-weight: 700;">Potencial Tecnologia</span>, empresa brasileira com mais<br>de <span style="font-weight: 700;">25 anos de experiência</span> em meios<br>de pagamento, automação e gestão financeira.
+          </p>
+          <p style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #2e2e2e;" data-orig-html="
+            &lt;span style=&quot;font-weight: 700;&quot;&gt;Infraestrutura robusta, certificações&lt;br&gt;de segurança&lt;/span&gt; e operações em larga escala&lt;br&gt;em todo o Brasil.
+          ">
+            <span style="font-weight: 700;">Infraestrutura robusta, certificações<br>de segurança</span> e operações em larga escala<br>em todo o Brasil.
+          </p>
+        </div>
+      </div>
+      <!-- COLUNA DIREITA: Grid 2 linhas × 3 cards — DESKTOP -->
+      <div class="quem-desktop flex flex-col flex-shrink-0" style="gap: 18px;">
+        <!-- LINHA 1: 25 anos / 100% digital / 24/07 -->
+        <div class="flex" style="gap: 24px;">
+          <!-- Card 01: 25 anos de mercado (calendar Material-style) -->
+          <article style="background: #f8f6f0; border-radius: 24px; width: 220px; height: 227px; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; padding: 32px 16px;">
+            <div class="flex flex-col w-full" style="gap: 8px;">
+              <!-- Ícone 48×48 -->
+              <img loading="lazy" decoding="async" src="/images/icons/ic-25mercado.svg" alt="" aria-hidden="true" style="width: 48px; height: 48px;">
+              <h3 style="font-family: 'Kufam', sans-serif; font-weight: 700; font-size: 20px; line-height: 24px; letter-spacing: 0.5px; color: #371b01;">25 anos<br>de mercado</h3>
+              <p style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #2e2e2e;" data-orig-html="Desenvolvendo&lt;br&gt;soluções digitais">Desenvolvendo<br>soluções digitais</p>
+            </div>
+          </article>
+          <!-- Card 02: 100% digital (devices) -->
+          <article style="background: #f8f6f0; border-radius: 24px; width: 220px; height: 227px; display: flex; flex-direction: column; align-items: flex-start; padding: 32px 16px;">
+            <div class="flex flex-col w-full" style="gap: 8px;">
+              <img loading="lazy" decoding="async" src="/images/icons/ic-digital.svg" alt="" aria-hidden="true" style="width: 48px; height: 48px;">
+              <h3 style="font-family: 'Kufam', sans-serif; font-weight: 700; font-size: 20px; line-height: 24px; letter-spacing: 0.5px; color: #371b01;">100%<br>digital</h3>
+              <p style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #2e2e2e;" data-orig-html="Plataforma totalmente&lt;br&gt;online e automatizada">Plataforma totalmente<br>online e automatizada</p>
+            </div>
+          </article>
+          <!-- Card 03: 24/07 disponibilidade (timer) -->
+          <article style="background: #f8f6f0; border-radius: 24px; width: 220px; height: 227px; display: flex; flex-direction: column; align-items: flex-start; padding: 32px 16px;">
+            <div class="flex flex-col w-full" style="gap: 8px;">
+              <img loading="lazy" decoding="async" src="/images/icons/ic-247.svg" alt="" aria-hidden="true" style="width: 48px; height: 48px;">
+              <h3 style="font-family: 'Kufam', sans-serif; font-weight: 700; font-size: 20px; line-height: 24px; letter-spacing: 0.5px; color: #371b01;">24/07<br>disponibilidade</h3>
+              <p style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #2e2e2e;" data-orig-html="Sistema operando&lt;br&gt;ininterruptamente">Sistema operando<br>ininterruptamente</p>
+            </div>
+          </article>
+        </div>
+        <!-- LINHA 2: Infraestrutura / Parcerias / Especialista -->
+        <div class="flex" style="gap: 24px;">
+          <!-- Card 04: Infraestrutura (lan / network topology) -->
+          <article style="background: #f8f6f0; border-radius: 24px; width: 220px; height: 227px; display: flex; flex-direction: column; align-items: flex-start; padding: 32px 16px;">
+            <div class="flex flex-col w-full" style="gap: 8px;">
+              <img loading="lazy" decoding="async" src="/images/icons/ic-infra2.svg" alt="" aria-hidden="true" style="width: 48px; height: 48px;">
+              <h3 style="font-family: 'Kufam', sans-serif; font-weight: 700; font-size: 20px; line-height: 24px; letter-spacing: 0.5px; color: #371b01;">Infraestrutura</h3>
+              <p style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #2e2e2e;" data-orig-html="robusta e certificada">robusta e certificada</p>
+            </div>
+          </article>
+          <!-- Card 05: Parcerias (handshake) -->
+          <article style="background: #f8f6f0; border-radius: 24px; width: 220px; height: 227px; display: flex; flex-direction: column; align-items: flex-start; padding: 32px 16px;">
+            <div class="flex flex-col w-full" style="gap: 8px;">
+              <img loading="lazy" decoding="async" src="/images/icons/ic-parcerias.svg" alt="" aria-hidden="true" style="width: 48px; height: 48px;">
+              <h3 style="font-family: 'Kufam', sans-serif; font-weight: 700; font-size: 20px; line-height: 24px; letter-spacing: 0.5px; color: #371b01;">Parcerias</h3>
+              <p style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #2e2e2e;" data-orig-html="corporativas&lt;br&gt;e governamentais">corporativas<br>e governamentais</p>
+            </div>
+          </article>
+          <!-- Card 06: Especialista (currency-exchange / cycle with $) -->
+          <article style="background: #f8f6f0; border-radius: 24px; width: 220px; height: 227px; display: flex; flex-direction: column; align-items: flex-start; padding: 32px 16px;">
+            <div class="flex flex-col w-full" style="gap: 8px;">
+              <img loading="lazy" decoding="async" src="/images/icons/ic-especialista.svg" alt="" aria-hidden="true" style="width: 48px; height: 48px;">
+              <h3 style="font-family: 'Kufam', sans-serif; font-weight: 700; font-size: 20px; line-height: 24px; letter-spacing: 0.5px; color: #371b01;">Especialista</h3>
+              <p style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #2e2e2e;" data-orig-html="em meios de pagamento e automação de transações">em meios de pagamento e automação de transações</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+    <!-- ===== CARROSSEL MOBILE (<768px) — Quem está por trás. Borda verde, controles verdes ===== -->
+    <div class="quem-mobile" style="display: none; width: 100%;">
+      <div class="quem-track" style="display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: none; padding-bottom: 4px;">
+        <!-- Card 01 -->
+        <article class="quem-card card-hover" style="scroll-snap-align: center; flex: 0 0 100%; background: #f8f6f0; border: 1px solid #009F44; border-radius: 24px; padding: 28px; display: flex; flex-direction: column; gap: 8px;">
+          <img loading="lazy" decoding="async" src="/images/icons/ic-25mercado.svg" alt="" aria-hidden="true" style="width: 44px; height: 44px;">
+          <h3 style="font-family: 'Kufam', sans-serif; font-weight: 700; font-size: 20px; line-height: 24px; letter-spacing: 0.5px; color: #371b01; margin: 8px 0 0 0;">25 anos de mercado</h3>
+          <p style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #2e2e2e; margin: 0;" data-orig-html="Desenvolvendo soluções digitais">Desenvolvendo soluções digitais</p>
+        </article>
+        <!-- Card 02 -->
+        <article class="quem-card card-hover" style="scroll-snap-align: center; flex: 0 0 100%; background: #f8f6f0; border: 1px solid #009F44; border-radius: 24px; padding: 28px; display: flex; flex-direction: column; gap: 8px;">
+          <img loading="lazy" decoding="async" src="/images/icons/ic-digital.svg" alt="" aria-hidden="true" style="width: 44px; height: 44px;">
+          <h3 style="font-family: 'Kufam', sans-serif; font-weight: 700; font-size: 20px; line-height: 24px; letter-spacing: 0.5px; color: #371b01; margin: 8px 0 0 0;">100% digital</h3>
+          <p style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #2e2e2e; margin: 0;" data-orig-html="Plataforma totalmente online e automatizada">Plataforma totalmente online e automatizada</p>
+        </article>
+        <!-- Card 03 -->
+        <article class="quem-card card-hover" style="scroll-snap-align: center; flex: 0 0 100%; background: #f8f6f0; border: 1px solid #009F44; border-radius: 24px; padding: 28px; display: flex; flex-direction: column; gap: 8px;">
+          <img loading="lazy" decoding="async" src="/images/icons/ic-247.svg" alt="" aria-hidden="true" style="width: 44px; height: 44px;">
+          <h3 style="font-family: 'Kufam', sans-serif; font-weight: 700; font-size: 20px; line-height: 24px; letter-spacing: 0.5px; color: #371b01; margin: 8px 0 0 0;">24/07 disponibilidade</h3>
+          <p style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #2e2e2e; margin: 0;" data-orig-html="Sistema operando ininterruptamente">Sistema operando ininterruptamente</p>
+        </article>
+        <!-- Card 04 -->
+        <article class="quem-card card-hover" style="scroll-snap-align: center; flex: 0 0 100%; background: #f8f6f0; border: 1px solid #009F44; border-radius: 24px; padding: 28px; display: flex; flex-direction: column; gap: 8px;">
+          <img loading="lazy" decoding="async" src="/images/icons/ic-infra2.svg" alt="" aria-hidden="true" style="width: 44px; height: 44px;">
+          <h3 style="font-family: 'Kufam', sans-serif; font-weight: 700; font-size: 20px; line-height: 24px; letter-spacing: 0.5px; color: #371b01; margin: 8px 0 0 0;">Infraestrutura</h3>
+          <p style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #2e2e2e; margin: 0;" data-orig-html="robusta e certificada">robusta e certificada</p>
+        </article>
+        <!-- Card 05 -->
+        <article class="quem-card card-hover" style="scroll-snap-align: center; flex: 0 0 100%; background: #f8f6f0; border: 1px solid #009F44; border-radius: 24px; padding: 28px; display: flex; flex-direction: column; gap: 8px;">
+          <img loading="lazy" decoding="async" src="/images/icons/ic-parcerias.svg" alt="" aria-hidden="true" style="width: 44px; height: 44px;">
+          <h3 style="font-family: 'Kufam', sans-serif; font-weight: 700; font-size: 20px; line-height: 24px; letter-spacing: 0.5px; color: #371b01; margin: 8px 0 0 0;">Parcerias</h3>
+          <p style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #2e2e2e; margin: 0;" data-orig-html="corporativas e governamentais">corporativas e governamentais</p>
+        </article>
+        <!-- Card 06 -->
+        <article class="quem-card card-hover" style="scroll-snap-align: center; flex: 0 0 100%; background: #f8f6f0; border: 1px solid #009F44; border-radius: 24px; padding: 28px; display: flex; flex-direction: column; gap: 8px;">
+          <img loading="lazy" decoding="async" src="/images/icons/ic-especialista.svg" alt="" aria-hidden="true" style="width: 44px; height: 44px;">
+          <h3 style="font-family: 'Kufam', sans-serif; font-weight: 700; font-size: 20px; line-height: 24px; letter-spacing: 0.5px; color: #371b01; margin: 8px 0 0 0;">Especialista</h3>
+          <p style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #2e2e2e; margin: 0;" data-orig-html="em meios de pagamento e automação de transações">em meios de pagamento e automação de transações</p>
+        </article>
+      </div>
+      <!-- Controles: bolinhas à esquerda, setas juntas à direita (verde Potencial) -->
+      <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 24px;">
+        <div class="quem-dots" style="display: flex; gap: 8px; align-items: center;">
+          <span data-i="0" style="width: 24px; height: 8px; border-radius: 999px; background: rgb(0, 159, 68); transition: 0.2s; cursor: pointer;"></span>
+          <span data-i="1" style="width: 8px; height: 8px; border-radius: 999px; background: rgb(212, 232, 218); transition: 0.2s; cursor: pointer;"></span>
+          <span data-i="2" style="width: 8px; height: 8px; border-radius: 999px; background: rgb(212, 232, 218); transition: 0.2s; cursor: pointer;"></span>
+          <span data-i="3" style="width: 8px; height: 8px; border-radius: 999px; background: rgb(212, 232, 218); transition: 0.2s; cursor: pointer;"></span>
+          <span data-i="4" style="width: 8px; height: 8px; border-radius: 999px; background: rgb(212, 232, 218); transition: 0.2s; cursor: pointer;"></span>
+          <span data-i="5" style="width: 8px; height: 8px; border-radius: 999px; background: rgb(212, 232, 218); transition: 0.2s; cursor: pointer;"></span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 12px; flex-shrink: 0;">
+          <button type="button" class="quem-prev" aria-label="Anterior" style="width: 44px; height: 44px; border-radius: 999px; border: 1px solid #009F44; background: #009F44; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          </button>
+          <button type="button" class="quem-next" aria-label="Próximo" style="width: 44px; height: 44px; border-radius: 999px; border: 1px solid #009F44; background: #fff; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="#009F44" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DOBRA 17 - SEGURANÇA ============ -->
+<section id="seguranca" class="bg-white relative" style="padding: 72px 107px 120px 107px;">
+  <div class="grid items-start gap-6 lg:grid-cols-2" style="max-width: 1153px; margin: 0 auto;">
+    <div class="reveal">
+      <span class="kicker">Segurança comprovada</span>
+      <h2 class="heading h2 mt-4">Excelência e confiança <strong class="font-extrabold">em&nbsp;cada transação</strong></h2>
+      <p class="content mt-6 text-brand-text-secondary" style="max-width: 467px;">A parceria com a Cielo, uma das principais adquirentes do mercado, reforça a confiabilidade no processamento de pagamentos seguro, eficiente e de alta performance.</p>
+      <p class="content mt-4 text-brand-text-secondary" style="max-width: 467px;">Com infraestrutura certificada e padrões rigorosos de segurança o Parcele Aqui garante operações confiáveis, escaláveis e em conformidade regulatória.</p>
+    </div>
+    <!-- 5 selos: 3 em cima (gap 56px) + 2 embaixo (gap 24px), alinhados à esquerda (Figma: pl-96 pt-64) -->
+    <div class="selos-cert flex flex-col" style="gap: 16px; padding-left: 96px; padding-top: 64px;">
+      <div class="flex items-center" style="gap: 56px; padding-top: 24px;">
+        <img loading="lazy" decoding="async" src="/images/logos/Component 18.svg" alt="Cielo" class="object-contain" style="height: 62px;" />
+        <img loading="lazy" decoding="async" src="/images/logos/Component 19.svg" alt="PCI DSS Compliant" class="object-contain" style="height: 66px;" />
+        <img loading="lazy" decoding="async" src="/images/logos/Component 20.svg" alt="DPO Oficial" class="object-contain selo-dpo" style="height: 80px;" />
+      </div>
+      <div class="flex items-center" style="gap: 24px; padding-top: 24px;">
+        <img loading="lazy" decoding="async" src="/images/logos/Component 21.svg" alt="Credenciado Senatran" class="object-contain" style="height: 57px;" />
+        <img loading="lazy" decoding="async" src="/images/logos/Component 22.svg" alt="Verificada por Reclame Aqui" class="object-contain" style="height: 49px;" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DOBRA 15 - FAQ ============ -->
+<section id="faq" class="bg-brand-beige-light overflow-hidden relative" style="padding: 0 107px 56px 107px;">
+  <div class="faq-desktop relative" style="max-width: 1153px; margin: 0 auto; min-height: 1100px;" data-dynamic-height="true">
+    <!-- PNG transparente com foto + shape amarelo embutidos -->
+    <img loading="lazy" decoding="async" src="/images/sections/secao-faq.webp" width="1382" height="1504" alt="Profissional sorridente com notebook" class="absolute block" style="top: 116px; left: 98px; width: 661px; height: auto;" />
+
+    <!-- Card branco com FAQ (sobreposto, posicionamento absoluto) -->
+    <!-- Figma: top 463, left 391 (relativo ao container 1153), w 663, padding pb-48 px-48 (gap dir 98px) -->
+    <div class="bg-white absolute z-10" style="top: 463px; left: 391px; width: 663px; border-radius: 32px; padding: 48px;">
+
+      <!-- Header content section (gap-10 entre kicker e header-block) -->
+      <div class="flex flex-col" style="gap: 10px;">
+
+        <!-- Kicker (pt-48 pb-4) -->
+        <div style="padding: 48px 0 4px 0;">
+          <p style="font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 16px; line-height: 24px; color: #2e2e2e;">Dúvidas frequentes</p>
+        </div>
+
+        <!-- Header block (gap-8 pb-8 entre headline e subtitle) -->
+        <div class="flex flex-col" style="gap: 8px; padding-bottom: 8px;">
+          <!-- Headline (Kufam 40/48, tracking 0.2px, split: regular "Entenda melhor a parceria" + bold "e o funcionamento do Parcele Aqui") -->
+          <h2 style="font-family: 'Kufam', sans-serif; font-size: 40px; line-height: 48px; letter-spacing: 0.2px; color: #371b01;">
+            <span style="font-weight: 400;">Entenda melhor a parceria<br/></span><span style="font-weight: 700;">e o funcionamento<br/>do Parcele Aqui</span>
+          </h2>
+
+          <!-- Subtitle (3 linhas com <br>) -->
+          <p style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #2e2e2e;">Pagamentos são uma das principais objeções no fechamento de <strong style="font-weight: 700;">negócios jurídicos</strong>. Aqui estão as respostas para as dúvidas mais comuns antes de ativar o Parcele Aqui.</p>
+        </div>
+      </div>
+
+      <!-- Accordion (gap 12px entre items conforme Figma, margin-top 12 do header) -->
+      <div class="flex flex-col" style="gap: 12px; margin-top: 12px;">
+        <!-- Pergunta 1 (aberta por padrão) -->
+        <details class="group bg-brand-yellow overflow-hidden" style="border-radius: 8px;">
+          <summary class="flex items-start cursor-pointer list-none" style="gap: 16px; padding: 12px 24px;">
+            <span class="flex-1" style="font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 16px; line-height: 24px; color: #371b01;">O Parcele Aqui é seguro?</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#371b01" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 transition-transform group-open:rotate-180">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </summary>
+          <div class="bg-white border-t border-brand-yellow" style="padding: 16px 24px 24px 24px;">
+            <p style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #2e2e2e;">Sim. A solução é desenvolvida pela Potencial Tecnologia, com mais de 25 anos de experiência, infraestrutura certificada e integração com adquirentes líderes.</p>
+          </div>
+        </details>
+
+        <!-- Pergunta 2 (fechada) -->
+        <details class="group bg-brand-yellow overflow-hidden" style="border-radius: 8px;">
+          <summary class="flex items-start cursor-pointer list-none" style="gap: 16px; padding: 12px 24px;">
+            <span class="flex-1" style="font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 16px; line-height: 24px; color: #371b01;">O emissor recebe à vista?</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#371b01" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 transition-transform group-open:rotate-180">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </summary>
+          <div class="bg-white border-t border-brand-yellow" style="padding: 16px 24px 24px 24px;">
+            <p style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #2e2e2e;">Sim. Assim que o cliente conclui o parcelamento no cartão, o boleto é liquidado em tempo real e o valor cheio é creditado ao emissor, sem esperar pelas parcelas.</p>
+          </div>
+        </details>
+
+        <!-- Pergunta 3 (fechada) -->
+        <details class="group bg-brand-yellow overflow-hidden" style="border-radius: 8px;">
+          <summary class="flex items-start cursor-pointer list-none" style="gap: 16px; padding: 12px 24px;">
+            <span class="flex-1" style="font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 16px; line-height: 24px; color: #371b01;">O cliente pode usar mais de um cartão?</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#371b01" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 transition-transform group-open:rotate-180">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </summary>
+          <div class="bg-white border-t border-brand-yellow" style="padding: 16px 24px 24px 24px;">
+            <p style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #2e2e2e;">Pode. Em uma mesma operação, o cliente pode dividir o pagamento em até 3 cartões de crédito, em até 12x.</p>
+          </div>
+        </details>
+
+        <!-- Pergunta 4 (fechada) -->
+        <details class="group bg-brand-yellow overflow-hidden" style="border-radius: 8px;">
+          <summary class="flex items-start cursor-pointer list-none" style="gap: 16px; padding: 12px 24px;">
+            <span class="flex-1" style="font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 16px; line-height: 24px; color: #371b01;">Quais pagamentos podem ser parcelados?</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#371b01" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 transition-transform group-open:rotate-180">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </summary>
+          <div class="bg-white border-t border-brand-yellow" style="padding: 16px 24px 24px 24px;">
+            <p style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #2e2e2e;">Custas e despesas processuais, fianças e cauções judiciais, taxas judiciais, anuidade e contribuições da OAB, honorários e emolumentos de cartório.</p>
+          </div>
+        </details>
+
+        <!-- Pergunta 5 (fechada) -->
+        <details class="group bg-brand-yellow overflow-hidden" style="border-radius: 8px;">
+          <summary class="flex items-start cursor-pointer list-none" style="gap: 16px; padding: 12px 24px;">
+            <span class="flex-1" style="font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 16px; line-height: 24px; color: #371b01;">O escritório ou órgão assume risco de inadimplência?</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#371b01" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 transition-transform group-open:rotate-180">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </summary>
+          <div class="bg-white border-t border-brand-yellow" style="padding: 16px 24px 24px 24px;">
+            <p style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #2e2e2e;">Não. O pagamento é processado como uma transação de cartão de crédito: o emissor recebe o valor à vista e o parcelamento passa a ser uma relação entre o tomador e a administradora do cartão dele. Nem o emissor nem o Parcele Aqui assumem o risco das parcelas.</p>
+          </div>
+        </details>
+
+        <!-- Pergunta 6 (fechada) -->
+        <details class="group bg-brand-yellow overflow-hidden" style="border-radius: 8px;">
+          <summary class="flex items-start cursor-pointer list-none" style="gap: 16px; padding: 12px 24px;">
+            <span class="flex-1" style="font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 16px; line-height: 24px; color: #371b01;">Preciso de credenciamento ou convênio?</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#371b01" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 transition-transform group-open:rotate-180">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </summary>
+          <div class="bg-white border-t border-brand-yellow" style="padding: 16px 24px 24px 24px;">
+            <p style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #2e2e2e;">Para escritórios (B2B), a adesão é direta, sem credenciamento. Para tribunais e OAB (institucional), avaliamos o convênio específico de cada órgão. Toda a estrutura financeira e de processamento é da Potencial Tecnologia.</p>
+          </div>
+        </details>
+        <details class="group bg-brand-yellow overflow-hidden" style="border-radius: 8px;">
+          <summary class="flex items-start cursor-pointer list-none" style="gap: 16px; padding: 12px 24px;">
+            <span class="flex-1" style="font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 16px; line-height: 24px; color: #371b01;">Qual o ganho do parceiro com o Parcele Aqui?</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#371b01" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 transition-transform group-open:rotate-180">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </summary>
+          <div class="bg-white border-t border-brand-yellow" style="padding: 16px 24px 24px 24px;">
+            <p style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #2e2e2e;">O parceiro recebe comissão sobre o valor de cada operação processada pelo Parcele Aqui, paga em M+1 pela Potencial Tecnologia. É uma receita adicional, sem custo de implementação nem mensalidade.</p>
+          </div>
+        </details>
+
+      </div>
+
+      <!-- Texto final - link azul #1f4fd8 (margin-top 12 conforme gap-12 do parent) -->
+      <p style="margin-top: 12px; font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #2e2e2e;">Ainda tem dúvidas? <a href="https://wa.me/5531973322921?text=Ol%C3%A1%21%20Vim%20da%20Landing%20Page%20Parcele%20Aqui%20Jur%C3%ADdico%20e%20tenho%20uma%20d%C3%BAvida%20e%20gostaria%20de%20falar%20com%20um%20especialista." target="_blank" rel="noopener" style="font-weight: 700; color: #1f4fd8;">Fale com um especialista.</a></p>
+    </div>
+  </div>
+
+  <!-- ===== VERSÃO MOBILE FAQ (<768px) — Figma node 4010:14467 (412px) ===== -->
+  <div class="faq-mobile" style="display: none; position: relative; padding: 0;">
+    <!-- Topo: foto com canto tr arredondado revela o fundo BEGE da dobra -->
+    <div style="background: #f8f6f0; padding-top: 8px;">
+      <!-- Foto topo, largura cheia, só canto top-right arredondado (240px) -->
+      <div style="position: relative; width: 100%; aspect-ratio: 412 / 421; overflow: hidden; border-radius: 0 240px 0 0;">
+        <img loading="lazy" decoding="async" src="/images/sections/secao-faq.webp" width="1382" height="1504" alt="Profissional sorridente com notebook" style="width: 120%; height: 120%; object-fit: cover; object-position: 88% 12%; display: block;" />
+      </div>
+    </div>
+
+    <!-- Conteúdo FAQ sobre fundo bege (começa abaixo da foto) -->
+    <div style="background: #f8f6f0; padding-bottom: 56px;">
+
+    <!-- Bloco FAQ (pad lateral 36, abaixo da foto) -->
+    <div style="padding: 0 36px;">
+      <!-- Header: kicker + headline + subtitle (Figma: kicker y48, headline y86, subtitle y286) -->
+      <div style="padding-top: 48px;">
+        <p style="font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 16px; line-height: 24px; color: #2e2e2e; margin: 0 0 10px 0;">Dúvidas frequentes</p>
+        <h2 style="font-family: 'Kufam', sans-serif; font-size: 32px; line-height: 40px; letter-spacing: 0.2px; color: #371b01; margin: 0 0 8px 0;">
+          <span style="font-weight: 400;">Entenda melhor a parceria </span><span style="font-weight: 700;">e o funcionamento do Parcele Aqui</span>
+        </h2>
+        <p style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #2e2e2e; margin: 0;">Pagamentos são uma das principais objeções no fechamento de <strong style="font-weight: 700;">negócios jurídicos</strong>. Aqui estão as respostas para as dúvidas mais comuns antes de ativar o Parcele Aqui.</p>
+      </div>
+
+      <!-- Accordion mobile (gap 12px conforme Figma) -->
+      <div class="flex flex-col" style="gap: 12px; margin-top: 24px;">
+        <details class="group bg-brand-yellow overflow-hidden" style="border-radius: 8px;">
+          <summary class="flex items-start cursor-pointer list-none" style="gap: 16px; padding: 12px 24px;">
+            <span class="flex-1" style="font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 16px; line-height: 24px; color: #371b01;">O Parcele Aqui é seguro?</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#371b01" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 transition-transform group-open:rotate-180"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="bg-white border-t border-brand-yellow" style="padding: 16px 24px 24px 24px;">
+            <p style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #2e2e2e; margin: 0;">Sim. A solução é desenvolvida pela Potencial Tecnologia, com mais de 25 anos de experiência, infraestrutura certificada e integração com adquirentes líderes.</p>
+          </div>
+        </details>
+        <details class="group bg-brand-yellow overflow-hidden" style="border-radius: 8px;">
+          <summary class="flex items-start cursor-pointer list-none" style="gap: 16px; padding: 12px 24px;">
+            <span class="flex-1" style="font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 16px; line-height: 24px; color: #371b01;">O emissor recebe à vista?</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#371b01" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 transition-transform group-open:rotate-180"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="bg-white border-t border-brand-yellow" style="padding: 16px 24px 24px 24px;">
+            <p style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #2e2e2e; margin: 0;">Sim. Assim que o cliente conclui o parcelamento no cartão, o boleto é liquidado em tempo real e o valor cheio é creditado ao emissor, sem esperar pelas parcelas.</p>
+          </div>
+        </details>
+        <details class="group bg-brand-yellow overflow-hidden" style="border-radius: 8px;">
+          <summary class="flex items-start cursor-pointer list-none" style="gap: 16px; padding: 12px 24px;">
+            <span class="flex-1" style="font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 16px; line-height: 24px; color: #371b01;">O cliente pode usar mais de um cartão?</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#371b01" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 transition-transform group-open:rotate-180"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="bg-white border-t border-brand-yellow" style="padding: 16px 24px 24px 24px;">
+            <p style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #2e2e2e; margin: 0;">Pode. Em uma mesma operação, o cliente pode dividir o pagamento em até 3 cartões de crédito, em até 12x.</p>
+          </div>
+        </details>
+        <details class="group bg-brand-yellow overflow-hidden" style="border-radius: 8px;">
+          <summary class="flex items-start cursor-pointer list-none" style="gap: 16px; padding: 12px 24px;">
+            <span class="flex-1" style="font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 16px; line-height: 24px; color: #371b01;">Quais pagamentos podem ser parcelados?</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#371b01" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 transition-transform group-open:rotate-180"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="bg-white border-t border-brand-yellow" style="padding: 16px 24px 24px 24px;">
+            <p style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #2e2e2e; margin: 0;">Custas e despesas processuais, fianças e cauções judiciais, taxas judiciais, anuidade e contribuições da OAB, honorários e emolumentos de cartório.</p>
+          </div>
+        </details>
+        <details class="group bg-brand-yellow overflow-hidden" style="border-radius: 8px;">
+          <summary class="flex items-start cursor-pointer list-none" style="gap: 16px; padding: 12px 24px;">
+            <span class="flex-1" style="font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 16px; line-height: 24px; color: #371b01;">O escritório ou órgão assume risco de inadimplência?</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#371b01" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 transition-transform group-open:rotate-180"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="bg-white border-t border-brand-yellow" style="padding: 16px 24px 24px 24px;">
+            <p style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #2e2e2e; margin: 0;">Não. O pagamento é processado como uma transação de cartão de crédito: o emissor recebe o valor à vista e o parcelamento passa a ser uma relação entre o tomador e a administradora do cartão dele. Nem o emissor nem o Parcele Aqui assumem o risco das parcelas.</p>
+          </div>
+        </details>
+        <details class="group bg-brand-yellow overflow-hidden" style="border-radius: 8px;">
+          <summary class="flex items-start cursor-pointer list-none" style="gap: 16px; padding: 12px 24px;">
+            <span class="flex-1" style="font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 16px; line-height: 24px; color: #371b01;">Preciso de credenciamento ou convênio?</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#371b01" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 transition-transform group-open:rotate-180"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="bg-white border-t border-brand-yellow" style="padding: 16px 24px 24px 24px;">
+            <p style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #2e2e2e; margin: 0;">Para escritórios (B2B), a adesão é direta, sem credenciamento. Para tribunais e OAB (institucional), avaliamos o convênio específico de cada órgão. Toda a estrutura financeira e de processamento é da Potencial Tecnologia.</p>
+          </div>
+        </details>
+        <details class="group bg-brand-yellow overflow-hidden" style="border-radius: 8px;">
+          <summary class="flex items-start cursor-pointer list-none" style="gap: 16px; padding: 12px 24px;">
+            <span class="flex-1" style="font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 16px; line-height: 24px; color: #371b01;">Qual o ganho do parceiro com o Parcele Aqui?</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#371b01" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 transition-transform group-open:rotate-180"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="bg-white border-t border-brand-yellow" style="padding: 16px 24px 24px 24px;">
+            <p style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #2e2e2e; margin: 0;">O parceiro recebe comissão sobre o valor de cada operação processada pelo Parcele Aqui, paga em M+1 pela Potencial Tecnologia. É uma receita adicional, sem custo de implementação nem mensalidade.</p>
+          </div>
+        </details>
+      </div>
+
+      <!-- Label final -->
+      <p style="margin-top: 12px; font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #2e2e2e;">Ainda tem dúvidas?<br/><a href="https://wa.me/5531973322921?text=Ol%C3%A1%21%20Vim%20da%20Landing%20Page%20Parcele%20Aqui%20Jur%C3%ADdico%20e%20tenho%20uma%20d%C3%BAvida%20e%20gostaria%20de%20falar%20com%20um%20especialista." target="_blank" rel="noopener" style="font-weight: 700; color: #1f4fd8;">Fale com um especialista.</a></p>
+    </div>
+    </div><!-- /wrapper bege -->
+  </div><!-- /faq-mobile -->
+</section>
+
+<style>
+  /* Responsividade dobra FAQ */
+  @media (max-width: 1023px) {
+    .faq-desktop { display: none !important; }
+    .faq-mobile { display: block !important; }
+    #faq { padding-left: 0 !important; padding-right: 0 !important; }
+  }
+  /* Contorno amarelo no accordion ABERTO (FAQ desktop + mobile) */
+  #faq details[open] {
+    border: 2px solid #ffb800;
+    background: #fff !important;
+  }
+  #faq details[open] > summary {
+    background: #ffb800;
+  }
+  #faq details[open] > div {
+    border-top: none !important;
+  }
+  #faq details:not([open]) {
+    border: 2px solid transparent;
+  }
+</style>
+
+<!-- ============ DOBRA 14 - CTA FINAL ============ -->
+<section id="cta" class="bg-white relative overflow-hidden" style="padding: 0 107px 120px 107px;">
+  <div class="relative" style="max-width: 1153px; margin: 0 auto;">
+
+    <!-- Container interno: foto à esquerda + texto à direita, gap 124, padding-top 56 -->
+    <div class="cta-inner relative flex items-center" style="gap: 124px; padding-top: 56px;">
+
+      <!-- COLUNA ESQUERDA: PNG transparente com foto + shape amarelo embutidos -->
+      <div class="reveal flex-shrink-0" style="width: 466px;">
+        <img loading="lazy" decoding="async" src="/images/sections/secao-cta-final.webp" width="992" height="676" alt="Profissional sorridente usando cartão de crédito e smartphone" class="block img-fade" style="width: 100%; height: auto;" />
+      </div>
+
+      <!-- COLUNA DIREITA: Kicker + Headline + Body + CTA -->
+      <div class="reveal cta-textcol flex flex-col flex-shrink-0" data-delay="1" style="gap: 10px; padding-top: 40px; width: 466px;">
+
+        <!-- Kicker -->
+        <div style="padding: 4px 0;">
+          <p style="font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 16px; line-height: 24px; color: #2e2e2e;">Pronto para destravar suas guias?</p>
+        </div>
+
+        <!-- Headline (Kufam 40/48, tracking 0.2px, parte 1 regular + parte 2 bold com br) -->
+        <h2 style="font-family: 'Kufam', sans-serif; font-size: 40px; line-height: 48px; letter-spacing: 0.2px; color: #371b01;">
+          <span style="font-weight: 400;">Transforme custas e honorários em </span><span style="font-weight: 700;">fôlego<br/>de caixa</span>
+        </h2>
+
+        <!-- Body (pt-16, parte regular + bolds + <br> antes de "e entregue") -->
+        <div style="padding-top: 16px;">
+          <p style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #2e2e2e;">
+            Fale com nosso time e <span style="font-weight: 700;">ative o Parcele Aqui</span> no seu escritório, órgão ou cartório. É rápido, <span style="font-weight: 700;">100% digital e sem burocracia</span>.
+          </p>
+        </div>
+
+        <!-- CTA (Inter Bold 18px, w-369, triple shadow, pt-14) -->
+        <div style="padding-top: 14px;">
+          <a href="https://wa.me/5531973322921?text=Ol%C3%A1%21%20Vim%20da%20Landing%20Page%20Parcele%20Aqui%20Jur%C3%ADdico%20e%20quero%20entender%20como%20o%20Parcele%20Aqui%20funciona%20no%20meu%20escrit%C3%B3rio." target="_blank" rel="noopener" class="inline-flex items-center justify-center bg-brand-yellow btn-yellow-hover rounded-sm transition" style="width: 369px; white-space: nowrap; padding: 16px 24px; font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 18px; line-height: 24px; color: #371b01; box-shadow: 0 4px 24px rgba(0,0,0,0.08), 0 0 4px rgba(0,0,0,0.08), 0 0 16px rgba(0,0,0,0.08);"><span class="cta-txt-desktop">Ver como funciona na prática</span><span class="cta-txt-mobile" style="display:none;">Ver como funciona</span></a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer id="site-footer" class="bg-brand-beige-light relative" style="padding: 0 107px 80px 107px;">
+  <div class="flex flex-col w-full" style="gap: 8px; max-width: 1153px; margin: 0 auto;">
+
+    <!-- ROW 1: 4 colunas (Logo+links | Links | Outros | Contato) -->
+    <div class="footer-cols flex w-full" style="gap: 24px; padding: 48px 0 32px 0; align-items: flex-start;">
+
+      <!-- COLUNA 1: Logo Parcele Aqui + 2 links institucionais -->
+      <div class="flex flex-col" style="flex: 1 0 0; min-width: 0; gap: 48px;">
+        <!-- Logo Parcele Aqui (h-106 container, logo 270×54) -->
+        <div class="flex items-center" style="height: 106px;">
+          <img loading="lazy" decoding="async" src="/images/logo-parcele-aqui.svg" alt="Parcele Aqui" style="width: 270px; height: 54px; object-fit: contain;" />
+        </div>
+        <!-- Links institucionais (cor #111 preto, sem título de coluna) -->
+        <div class="flex flex-col w-full" style="gap: 16px;">
+          <a href="https://parceleaqui.com.br/sobre-nos" target="_blank" rel="noopener" style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 14px; line-height: 16px; color: #111; transition: color 0.2s;" onmouseover="this.style.color='#e6ac00'" onmouseout="this.style.color='#111'">Quem somos</a>
+          <a href="#seguranca" style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 14px; line-height: 16px; color: #111; transition: color 0.2s;" onmouseover="this.style.color='#e6ac00'" onmouseout="this.style.color='#111'">Parceiros e certificações</a>
+        </div>
+      </div>
+
+      <!-- COLUNA 2: Links (pt-125 alinha embaixo do logo da col 1) -->
+      <div class="flex flex-col flex-shrink-0" style="width: 267px; padding-top: 125px;">
+        <div class="flex flex-col" style="gap: 16px;">
+          <!-- Título "Links" + linha amarela separadora -->
+          <div class="flex flex-col w-full" style="gap: 8px; padding-bottom: 8px;">
+            <p style="font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 20px; line-height: 24px; color: #371b01;">Links</p>
+            <div style="width: 172px; height: 1px; background: #ffb800;" aria-hidden="true"></div>
+          </div>
+          <!-- Links -->
+          <a href="https://parceleaqui.com.br/sobre-nos" target="_blank" rel="noopener" style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 14px; line-height: 18px; color: #2e2e2e; transition: color 0.2s;" onmouseover="this.style.color='#e6ac00'" onmouseout="this.style.color='#2e2e2e'">Sobre nós</a>
+          <a href="#como-funciona" style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 14px; line-height: 18px; color: #2e2e2e; transition: color 0.2s;" onmouseover="this.style.color='#e6ac00'" onmouseout="this.style.color='#2e2e2e'">Como funciona</a>
+          <a href="#modelos" style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 14px; line-height: 18px; color: #2e2e2e; transition: color 0.2s;" onmouseover="this.style.color='#e6ac00'" onmouseout="this.style.color='#2e2e2e'">Soluções</a>
+        </div>
+      </div>
+
+      <!-- COLUNA 3: Outros -->
+      <div class="flex flex-col" style="flex: 1 0 0; min-width: 0; padding-top: 125px;">
+        <div class="flex flex-col" style="gap: 16px;">
+          <div class="flex flex-col w-full" style="gap: 8px; padding-bottom: 8px;">
+            <p style="font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 20px; line-height: 24px; color: #371b01;">Outros</p>
+            <div style="width: 172px; height: 1px; background: #ffb800;" aria-hidden="true"></div>
+          </div>
+          <a href="https://parceleaqui.com.br/politica-de-privacidade" target="_blank" rel="noopener" style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 14px; line-height: 16px; color: #2e2e2e; transition: color 0.2s;" onmouseover="this.style.color='#e6ac00'" onmouseout="this.style.color='#2e2e2e'">Política de privacidade</a>
+          <a href="https://parceleaqui.com.br/preciso-de-ajuda" target="_blank" rel="noopener" style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 14px; line-height: 16px; color: #2e2e2e; transition: color 0.2s;" onmouseover="this.style.color='#e6ac00'" onmouseout="this.style.color='#2e2e2e'">Preciso de ajuda</a>
+          <a href="https://parceleaqui.com.br/termos-de-servico" target="_blank" rel="noopener" style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 14px; line-height: 16px; color: #2e2e2e; transition: color 0.2s;" onmouseover="this.style.color='#e6ac00'" onmouseout="this.style.color='#2e2e2e'">Termos de serviço</a>
+          <a href="https://parceleaqui.com.br/politica-pld" target="_blank" rel="noopener" style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 14px; line-height: 16px; color: #2e2e2e; transition: color 0.2s;" onmouseover="this.style.color='#e6ac00'" onmouseout="this.style.color='#2e2e2e'">Política PLD e FT</a>
+        </div>
+      </div>
+
+      <!-- COLUNA 4: Contato (telefone + email suporte) -->
+      <div class="flex flex-col" style="flex: 1 0 0; min-width: 0; padding-top: 125px; gap: 32px;">
+        <div class="flex flex-col w-full" style="gap: 24px;">
+          <!-- Título "Contato" + linha -->
+          <div class="flex flex-col w-full" style="gap: 8px;">
+            <p style="font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 20px; line-height: 24px; color: #371b01;">Contato</p>
+            <div style="width: 172px; height: 1px; background: #ffb800;" aria-hidden="true"></div>
+          </div>
+          <!-- Telefone (DM Sans Bold 20px) -->
+          <div class="flex flex-col w-full">
+            <a href="tel:+551131591380" style="font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 20px; line-height: 24px; color: #2e2e2e; transition: color 0.2s;" onmouseover="this.style.color='#e6ac00'" onmouseout="this.style.color='#2e2e2e'">(11) 3159-1380</a>
+          </div>
+          <!-- Suporte técnico (label bold + email regular) -->
+          <div class="flex flex-col w-full" style="gap: 8px;">
+            <p style="font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 14px; line-height: 20px; color: #2e2e2e;">Suporte técnico:</p>
+            <a href="mailto:suporte@potencialtecnologia.com.br" style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 14px; line-height: 20px; color: #2e2e2e; transition: color 0.2s; word-break: break-all;" onmouseover="this.style.color='#e6ac00'" onmouseout="this.style.color='#2e2e2e'">suporte@potencialtecnologia.com.br</a>
+          </div>
+          <!-- Ghost button: Simulação (URL externa do site Parcele Aqui) -->
+          <a href="https://parceleaqui.com.br/simulacao" target="_blank" rel="noopener" class="inline-flex items-center justify-center transition" style="margin-top: 8px; padding: 12px 24px; border: 1px solid #371b01; border-radius: 4px; font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 14px; line-height: 20px; color: #371b01; background: transparent; align-self: flex-start;" onmouseover="this.style.background='#371b01'; this.style.color='#ffb800';" onmouseout="this.style.background='transparent'; this.style.color='#371b01';">Fazer uma simulação</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- POWERED BY (logo Potencial Tec pequeno + texto institucional) -->
+    <div class="relative w-full" style="padding: 8px 0;">
+      <div class="flex items-center" style="gap: 16px;">
+        <p style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 12px; line-height: 17px; color: #111;">Powered by</p>
+        <a href="https://www.potencialtecnologia.com.br/" target="_blank" rel="noopener" aria-label="Potencial Tecnologia" class="inline-flex items-center">
+          <img loading="lazy" decoding="async" src="/images/logos/logo-potencial-tecnologia.svg" alt="Potencial Tecnologia" style="width: 96px; height: 27px; object-fit: contain;" />
+        </a>
+      </div>
+      <p style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 12px; line-height: 16px; color: #111; margin-top: 12px;">Plataforma de parcelamento desenvolvida para o Parcele Aqui, sob responsabilidade do Grupo Potencial.</p>
+    </div>
+
+    <!-- LINHA HORIZONTAL separadora -->
+    <div class="w-full" style="height: 1px; background: #371b01; opacity: 0.15; margin-top: 8px;" aria-hidden="true"></div>
+
+    <!-- ROW 3: Copyright + ícones redes sociais -->
+    <div class="footer-bottom flex items-center justify-between w-full" style="padding-top: 8px;">
+      <p style="font-family: 'DM Sans', sans-serif; font-weight: 400; font-size: 12px; line-height: 16px; color: #111; text-transform: uppercase;">© PARCELE AQUI - POTENCIAL TECNOLOGIA ·<br class="cnpj-break"/> CNPJ: 21.301.803/0001-56<br/><a href="https://maps.app.goo.gl/UU9X37krs69BUgkDA" target="_blank" rel="noopener" style="color: #111; text-decoration: none; text-transform: none; transition: color 0.2s;" onmouseover="this.style.color='#e6ac00'" onmouseout="this.style.color='#111'">Av. Marquês de São Vicente, 1619, Barra Funda - São Paulo, SP</a></p>
+
+      <div class="flex items-start">
+        <!-- LinkedIn (p-10, ícone 24×24, cor #111) -->
+        <a href="https://linkedin.com/company/grupo-potencial/" target="_blank" rel="noopener" aria-label="LinkedIn" class="flex items-center justify-center rounded-sm transition" style="padding: 10px; color: #111;" onmouseover="this.style.color='#e6ac00'" onmouseout="this.style.color='#111'">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/parceleaquibr/" target="_blank" rel="noopener" aria-label="Instagram" class="flex items-center justify-center rounded-sm transition" style="padding: 10px; color: #111;" onmouseover="this.style.color='#e6ac00'" onmouseout="this.style.color='#111'">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  /* Footer responsivo: empilha colunas no mobile (Figma node 4010:14566, pad 36) */
+  @media (max-width: 1023px) {
+    #site-footer { padding-left: 36px !important; padding-right: 36px !important; padding-bottom: 48px !important; }
+    /* espaçamento de 56px entre os blocos empilhados (logo / Links / Outros / Contato) */
+    #site-footer .footer-cols { flex-direction: column !important; gap: 56px !important; }
+    #site-footer .footer-cols > div { width: 100% !important; flex: none !important; padding-top: 0 !important; gap: 16px !important; }
+    /* col 1: logo -20% (270x54 -> 216x43) e espaçamento de 32px do logo para 'Quem somos' */
+    #site-footer .footer-cols > div:first-child { gap: 32px !important; }
+    #site-footer .footer-cols > div:first-child > div:first-child { height: auto !important; }
+    #site-footer .footer-cols > div:first-child img { width: 216px !important; height: 43px !important; }
+    /* títulos das seções (Links / Outros / Contato) em 20px no mobile */
+    #site-footer .footer-cols p[style*="font-size: 20px"] { font-size: 20px !important; }
+    /* row copyright: empilha CNPJ acima dos ícones */
+    #site-footer .footer-bottom { flex-direction: column !important; align-items: flex-start !important; gap: 16px !important; }
+    /* quebra do copyright (CNPJ na linha de baixo) só no mobile */
+    #site-footer .cnpj-break { display: inline !important; }
+  }
+  /* desktop: copyright em uma linha só */
+  #site-footer .cnpj-break { display: none; }
+</style>
+
+<!-- Microsoft Clarity -->
+
+
+<!-- FAQ: accordion exclusivo (abrir um fecha os demais do mesmo grupo) -->
+
+
+<!-- Menu mobile: toggle abrir/fechar com animação -->
+
+
+
+<!-- ============ CTA FLUTUANTE - FALAR COM ESPECIALISTA ============ -->
+<!-- CTA flutuante: usa o mesmo WhatsApp dos demais CTAs (+55 31 97332-2921 / wa.me/5531973322921). -->
+<a id="cta-flutuante"
+   href="https://wa.me/5531973322921?text=Ol%C3%A1%21%20Vim%20da%20Landing%20Page%20Parcele%20Aqui%20Jur%C3%ADdico%20e%20gostaria%20de%20falar%20com%20um%20especialista."
+   target="_blank" rel="noopener"
+   aria-label="Falar com um especialista pelo WhatsApp">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="flex-shrink:0;">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.149-.197.297-.767.967-.94 1.165-.173.198-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.71.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413"/>
+  </svg>
+  <span class="cta-flut-txt">Falar com especialista</span>
+</a>
+
+
+
+
+<!-- v55 — FAQ altura dinâmica: ajusta min-height da .faq-desktop quando details abre/fecha pra evitar que o card vaze pra próxima dobra -->
+<a class="sticky-cta" href="https://wa.me/5531973322921?text=Ol%C3%A1%21%20Vim%20da%20Landing%20Page%20Parcele%20Aqui%20Jur%C3%ADdico%20e%20gostaria%20de%20falar%20com%20um%20especialista." target="_blank" rel="noopener" aria-label="Falar com especialista no WhatsApp"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5Z" stroke="#371b01" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Falar com especialista</a>
