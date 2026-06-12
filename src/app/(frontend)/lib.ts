@@ -1,0 +1,2 @@
+// legado nao utilizado
+export {}

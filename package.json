@@ -1,0 +1,46 @@
+{
+  "name": "lp-juridico-parcele-aqui",
+  "version": "1.0.0",
+  "description": "Landing page do Parcele Aqui para o mercado juridico (escritorios, OAB, TJs e cartorios). Next.js 15 + Payload 3.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "devsafe": "rm -rf .next && next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "seed": "cross-env PAYLOAD_SEED=true tsx src/seed/run.ts",
+    "generate:types": "payload generate:types",
+    "generate:importmap": "payload generate:importmap",
+    "payload": "payload"
+  },
+  "dependencies": {
+    "@payloadcms/db-sqlite": "latest",
+    "@payloadcms/next": "latest",
+    "@payloadcms/richtext-lexical": "latest",
+    "@payloadcms/ui": "latest",
+    "cross-env": "^7.0.3",
+    "graphql": "^16.9.0",
+    "next": "15.3.0",
+    "payload": "latest",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "sharp": "0.33.5",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.4",
+    "@types/react": "19.1.0",
+    "@types/react-dom": "19.1.0",
+    "tsx": "^4.19.2",
+    "typescript": "5.7.3",
+    "sass": "^1.77.4",
+    "tailwindcss": "^3.4.13",
+    "postcss": "^8.4.47",
+    "autoprefixer": "^10.4.20"
+  },
+  "engines": {
+    "node": ">=18.20.0"
+  }
+}
