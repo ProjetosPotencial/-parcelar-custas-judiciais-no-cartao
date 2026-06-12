@@ -1,0 +1,3 @@
+Esta pasta guarda as imagens enviadas pelo admin do Payload (uploads em runtime).
+O conteúdo NÃO vai para o git (ver .gitignore). A pasta é recriada automaticamente
+pelos scripts "predev"/"prebuild". Em produção, use storage em nuvem (ver MEDIA.md).
